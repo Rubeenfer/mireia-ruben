@@ -1,200 +1,61 @@
 ---
-import { translations } from "../i18n/translations"
+import { translations } from "../i18n/translations";
 
-type LanguageCode = "es" | "ca" | "en"
+type LanguageCode = "es" | "ca" | "en";
 interface Props {
-  lang?: LanguageCode
+  lang?: LanguageCode;
 }
-const { lang = "es" }: Props = Astro.props
-const t = translations[lang]
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
 ---
 
-<section id='rsvp' class='py-16 bg-white dark:bg-gray-900'>
-  <div class='container mx-auto px-4'>
-    <h2
-      class='text-4xl font-bold text-center text-primary dark:text-white mb-8'
-    >
+<section id="rsvp" class="section">
+  <div class="section-container">
+    <h2 class="heading-2">
       {t.rsvp.title}
     </h2>
-    <form
-      id='rsvp-form'
-      class='max-w-lg mx-auto bg-gray-100 dark:bg-gray-800 shadow-lg rounded-lg p-8'
-    >
-      <div class='mb-4'>
-        <label
-          for='name'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.name}
-        </label>
-        <input
-          type='text'
-          id='name'
-          name='name'
-          required
-          class='w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-primary'
-        />
-      </div>
-      <div class='mb-4'>
-        <label
-          for='surname'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.surname}
-        </label>
-        <input
-          type='text'
-          id='surname'
-          name='surname'
-          required
-          class='w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-primary'
-        />
-      </div>
-      <div class='mb-4'>
-        <label
-          for='email'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.email}
-        </label>
-        <input
-          type='email'
-          id='email'
-          name='email'
-          required
-          class='w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-primary'
-        />
-      </div>
-      <div class='mb-4'>
-        <label
-          for='phone'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.phone}
-        </label>
-        <input
-          type='tel'
-          id='phone'
-          name='phone'
-          pattern='[0-9]{10}'
-          required
-          class='w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-primary'
-        />
-      </div>
-      <div class='mb-4'>
-        <label
-          for='attending'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.attendance}
-        </label>
-        <select
-          id='attending'
-          name='attending'
-          required
-          class='w-full px-3 py-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border rounded-lg focus:outline-none focus:border-primary'
-        >
-          <option value=''>Please select</option>
-          <option value='yes'>Yes, I'll be there</option>
-          <option value='no'>Sorry, I can't make it</option>
-        </select>
-      </div>
-
-      <div class='mb-4'>
-        <label
-          for='dietary-options'
-          class='block text-gray-700 dark:text-gray-300 font-bold mb-2'
-        >
-          {t.rsvp.form.dietary.question}
-        </label>
-        <div id='dietary-options' class='flex flex-col'>
-          <label class='inline-flex items-center'>
-            <input
-              type='checkbox'
-              name='dietary'
-              value={t.rsvp.form.dietary.vegetarian}
-              class='form-checkbox rounded focus:ring-primary focus:outline-none'
-            />
-            <span class='ml-2 text-gray-700 dark:text-gray-300'>
-              {t.rsvp.form.dietary.vegetarian}
-            </span>
-          </label>
-          <label class='inline-flex items-center mt-2'>
-            <input
-              type='checkbox'
-              name='dietary'
-              value={t.rsvp.form.dietary.gluten}
-              class='form-checkbox rounded focus:ring-primary focus:outline-none'
-            />
-            <span class='ml-2 text-gray-700 dark:text-gray-300'>
-              {t.rsvp.form.dietary.gluten}
-            </span>
-          </label>
-          <label class='inline-flex items-center mt-2'>
-            <input
-              type='checkbox'
-              name='dietary'
-              value={t.rsvp.form.dietary.lactose}
-              class='form-checkbox rounded focus:ring-primary focus:outline-none'
-            />
-            <span class='ml-2 text-gray-700 dark:text-gray-300'>
-              {t.rsvp.form.dietary.lactose}
-            </span>
-          </label>
-          <label class='inline-flex items-center mt-2'>
-            <input
-              type='checkbox'
-              name='dietary'
-              value={t.rsvp.form.dietary.other}
-              class='form-checkbox rounded focus:ring-primary focus:outline-none'
-            />
-            <input
-              style='margin-left: 8px;'
-              type='text'
-              name='dietary'
-              placeholder={t.rsvp.form.dietary.other}
-              class='form-checkbox ounded focus:ring-primary focus:outline-none'
-            />
-          </label>
-        </div>
-      </div>
-
-      <button
-        type='submit'
-        class='w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300'
+    <div class="form">
+      <div
+        data-tf-live="01JHW4Q1R9F4VGAEMBW69GAQZE"
+        data-tf-hide-headers
+        data-tf-auto-resize="500, 800"
+        data-tf-disable-scroll
       >
-        {t.rsvp.form.dietary.submit}
-      </button>
-    </form>
+      </div>
+
+      <script is:inline src="//embed.typeform.com/next/embed.js"></script>
+    </div>
   </div>
 </section>
 
+<style>
+  .section {
+    @apply bg-white py-16 dark:bg-gray-900;
+  }
+  .section-container {
+    @apply container m-auto flex flex-col gap-10;
+  }
+
+  .form {
+    @apply m-auto w-[90dvw] rounded-lg shadow-lg;
+    @apply sm:w-9/12 xl:w-1/2;
+  }
+
+  [class^="sticky-header-container__Wrapper-sc"] {
+    display: none !important;
+  }
+  .jbtsqZ {
+    display: none !important;
+  }
+</style>
+
 <script>
-  const formElement = document.getElementById("rsvp-form")
-  formElement?.addEventListener("submit", async (e) => {
-    e.preventDefault()
+  const observer = new MutationObserver(() => {
+    const footerButton = document.querySelector(
+      '[type="button"][data-qa="fixed-footer-brand-button"]',
+    ) as HTMLElement;
+    if (footerButton) footerButton.style.display = "none";
+  });
 
-    const form = e.target as HTMLFormElement | null
-    if (!form) return console.error("RSVP form not found")
-
-    const formData = new FormData(form)
-
-    try {
-      const response = await fetch("/api/rsvp", {
-        method: "POST",
-        body: formData,
-      })
-
-      if (response.ok) {
-        alert("Thank you for your RSVP!")
-        form.reset()
-      } else alert("There was an error submitting your RSVP. Please try again.")
-    } catch (error) {
-      console.error("Error submitting RSVP:", error)
-      alert("There was an error submitting your RSVP. Please try again.")
-    }
-  })
+  observer.observe(document.body, { childList: true, subtree: true });
 </script>
-<!-- 
-“Si tu idea de un regalo perfecto es algo útil y práctico, aquí tienes nuestra cuenta. ¡Gracias por ser parte de este día tan especial y ayudarnos a crear el futuro que soñamos!”
- -->

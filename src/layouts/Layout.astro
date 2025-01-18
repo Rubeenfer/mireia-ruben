@@ -79,13 +79,15 @@ const t = translations[lang];
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .heading-1 {
     font-family: "Brittany Signature", sans-serif, system-ui;
+    @apply z-10 m-auto text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl;
+  }
+  .heading-2 {
+    font-family: "Brittany Signature", sans-serif, system-ui;
+    @apply mb-8 text-center text-3xl font-bold tracking-[.25em] text-black dark:text-white;
+    @apply sm:text-4xl md:text-5xl; /*
+    text-shadow: 0 2px 5px rgba(249, 245, 240); */
   }
 
   .text-brittany {
