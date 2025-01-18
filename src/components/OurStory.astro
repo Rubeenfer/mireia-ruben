@@ -10,6 +10,10 @@ const t = translations[lang];
 ---
 
 <section id="our-story" class="section">
+  <div class="mb-[-50px] flex min-h-[50px]">
+    <div class="top-overlay bg-topLeft dark:bg-darkTopLeft"></div>
+    <div class="top-overlay bg-topRight dark:bg-darkTopRight"></div>
+  </div>
   <div class="section-container">
     <h2 class="heading-2">
       {t.ourStory.title}
@@ -23,19 +27,31 @@ const t = translations[lang];
       </p>
     </div>
   </div>
+  <div class="flex">
+    <div class="bottom-overlay bg-bottomLeft dark:bg-darkBottomLeft"></div>
+    <div class="bottom-overlay bg-bottomRight dark:bg-darkBottomRight"></div>
+  </div>
 </section>
 
 <style>
   .section {
-    @apply flex items-center justify-center bg-our-story-2;
-    @apply dark:bg-our-story-dark-2;
+    @apply bg-ourStory2 flex flex-col items-center justify-center;
+    @apply dark:bg-darkOurStory2;
+  }
+  .top-overlay {
+    @apply mb-[-50px] flex min-h-[50px] min-w-[50dvw];
+    @apply z-20;
+  }
+  .bottom-overlay {
+    @apply mt-[-50px] flex min-h-[50px] min-w-[50dvw];
+    @apply z-20;
   }
 
   .section-container {
     @apply container flex min-w-[100dvw] flex-col gap-10 py-20;
-    @apply bg-our-story-mobile bg-cover bg-fixed bg-no-repeat transition-all duration-300;
-    @apply md:bg-our-story md:bg-[length:40%] md:bg-local md:bg-[2%_center] lg:bg-[length:30%] xl:bg-[length:25%];
-    @apply dark:bg-our-story-dark-mobile dark:md:bg-our-story-dark dark:md:bg-[98%_top];
+    @apply bg-ourStoryMobile bg-cover bg-fixed bg-no-repeat transition-all duration-300;
+    @apply md:bg-ourStory md:bg-[length:40%] md:bg-local md:bg-[2%_center] lg:bg-[length:30%] xl:bg-[length:25%];
+    @apply dark:bg-darkOurStoryMobile dark:md:bg-darkOurStory dark:md:bg-[98%_top];
   }
 
   .section-content {
