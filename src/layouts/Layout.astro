@@ -54,7 +54,7 @@ const t = translations[lang];
 
   @font-face {
     font-family: "Brittany Signature";
-    src: url("/public/fonts/BrittanySignature/BrittanySignature.ttf");
+    src: url("/fonts/BrittanySignature/BrittanySignature.ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -69,13 +69,35 @@ const t = translations[lang];
     900: "Black"
   );
 
+  @font-face {
+    font-family: "Kalam";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url("/fonts/Kalam/Kalam-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Kalam";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url("/fonts/Kalam/Kalam-Light.ttf");
+  }
+  @font-face {
+    font-family: "Kalam";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/fonts/Kalam/Kalam-Regular.ttf");
+  }
+
   @each $weight, $suffix in $weights {
     @font-face {
       font-family: "Red Hat Display";
       font-style: normal;
       font-display: swap;
       font-weight: $weight;
-      src: url("/public/fonts/RedHatDisplay/RedHatDisplay#{$suffix}.ttf");
+      src: url("/fonts/RedHatDisplay/RedHatDisplay#{$suffix}.ttf");
     }
   }
 
@@ -84,14 +106,16 @@ const t = translations[lang];
     @apply z-10 m-auto text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl;
   }
   .heading-2 {
-    font-family: "Brittany Signature", sans-serif, system-ui;
-    @apply m-0 text-center text-3xl font-bold leading-loose tracking-[.25em] text-black dark:text-white;
-    @apply sm:text-4xl md:text-5xl md:leading-loose; /*
-    text-shadow: 0 2px 5px rgba(249, 245, 240); */
+    font-family: "Kalam", sans-serif, system-ui;
+    @apply m-0 text-center text-3xl text-black dark:text-white;
+    @apply /* text-shadow: 0 2px 5px rgba(249, 245, 240); */ sm:text-4xl md:text-5xl;
   }
 
   .text-brittany {
-    font-family: "Brittany Signature", sans-serif, system-ui;
+    font-family: "Brittany Signature", "Red Hat Display", sans-serif, system-ui;
+  }
+  .text-kalam {
+    font-family: "Kalam", "Red Hat Display", sans-serif, system-ui;
   }
 
   * {

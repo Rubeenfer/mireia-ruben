@@ -19,11 +19,16 @@ const ourStoryNight = "/images/test2.jpeg";
 const dock = "/images/dock.jpg";
 
 // RADIAL-COLORS:
-const night = `radial-gradient(circle at 0% 100%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
-const nightReverse = `radial-gradient(circle at 0% 0%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
 
-const olive = `radial-gradient(circle at 100% 100%, ${darkGreen}  5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
-const oliveReverse = `radial-gradient(circle at 100% 0%, ${darkGreen}  5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
+const night_0_0 = `radial-gradient(circle at 0% 0%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
+const night_0_100 = `radial-gradient(circle at 0% 100%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
+const night_100_0 = `radial-gradient(circle at 100% 0%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
+const night_100_100 = `radial-gradient(circle at 100% 100%,  ${darkBlue} 5vw, ${lightBlue} 50vw, ${lightBlue} 100vw)`;
+
+const day_0_0 = `radial-gradient(circle at 0% 0%,  ${darkGreen} 5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
+const day_0_100 = `radial-gradient(circle at 0% 100%,  ${darkGreen} 5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
+const day_100_0 = `radial-gradient(circle at 100% 0%,  ${darkGreen} 5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
+const day_100_100 = `radial-gradient(circle at 100% 100%,  ${darkGreen} 5vw, ${lightGreen} 50vw, ${lightGreen} 100vw)`;
 
 // LINEAR-COLORS:
 const oliveOverlay = `linear-gradient(0deg, ${transparent} 0%, ${lightGreen} 50%)`;
@@ -55,21 +60,26 @@ module.exports = {
         accent: "#e9d8a6",
         dark: "#1c394f",
         light: "#d4d8c5",
+        darkGreen,
       },
       backgroundImage: {
         darkHero,
         darkOurStory,
         darkOurStoryMobile,
         darkSchedule,
+        day_0_0,
+        day_0_100,
+        day_100_0,
+        day_100_100,
         hero,
-        night,
+        night_0_0,
+        night_0_100,
+        night_100_0,
+        night_100_100,
         nightOverlay,
         nightOverlayReverse,
-        nightReverse,
-        olive,
         oliveOverlay,
         oliveOverlayReverse,
-        oliveReverse,
         ourStory,
         ourStoryMobile,
         schedule,

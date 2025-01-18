@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       ourStory: "Nuestra Historia",
       rsvp: "Confirmar asistencia",
-      locationSchedule: "Ubicación y Horario",
+      locationSchedule: "¿Dónde?",
       gallery: "Galería",
       proposal: "La Propuesta",
       collaborators: "Colaboradores",
@@ -62,11 +62,13 @@ export const translations = {
       imageAlt: "Imagen de boda {index}",
     },
     location: {
-      title: "Ubicación",
-      address: "Dirección",
+      title: "¿Dónde?",
+      address1: "Carrer de Sant Lluís",
+      address2: "17600 Figueres, Girona",
+      place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "Horario",
+      title: "¿Cúando?",
       ceremony: "Ceremonia",
       appetizer: "Aperitivo",
       lunch: "Comida",
@@ -135,7 +137,9 @@ export const translations = {
     },
     location: {
       title: "Ubicación",
-      address: "Dirección",
+      address1: "Carrer de Sant Lluís",
+      address2: "17600 Figueres, Girona",
+      place: "La Farinera de Sant Lluís",
     },
     schedule: {
       title: "Horario",
@@ -207,7 +211,9 @@ export const translations = {
     },
     location: {
       title: "Ubicación",
-      address: "Dirección",
+      place: "La Farinera de Sant Lluís",
+      address1: "Carrer de Sant Lluís",
+      address2: "17600 Figueres, Girona",
     },
     schedule: {
       title: "Horario",
