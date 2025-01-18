@@ -30,10 +30,11 @@ const t = translations[lang];
 
 <style>
   .section {
-    @apply bg-white py-16 dark:bg-gray-900;
+    @apply bg-white dark:bg-gray-900;
   }
   .section-container {
-    @apply container m-auto flex flex-col gap-10;
+    @apply container flex min-w-[100dvw] flex-col gap-10 py-20;
+    @apply bg-oliveReverse bg-cover bg-no-repeat transition-all duration-300;
   }
 
   .form {
