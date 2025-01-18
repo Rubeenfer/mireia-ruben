@@ -1,0 +1,113 @@
+---
+import { translations } from "../i18n/translations";
+
+export interface Props {
+  title: string;
+  lang?: "es" | "ca" | "en";
+}
+
+const { title, lang = "es" } = Astro.props;
+const t = translations[lang];
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mireia and Rubén's Wedding Website" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-cream font-sans text-gray-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-cream: #f9f5f0;
+    --color-gold: #d4af37;
+    --color-burgundy: #800020;
+  }
+
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+  .bg-cream-80 {
+    opacity: 0.8;
+    background-color: var(--color-cream);
+  }
+  .text-gold {
+    color: var(--color-gold);
+  }
+  .text-burgundy {
+    color: var(--color-burgundy);
+  }
+
+  @font-face {
+    font-family: "Brittany Signature";
+    src: url("/public/fonts/BrittanySignature/BrittanySignature.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  $weights: (
+    300: "Light",
+    400: "",
+    500: "Medium",
+    600: "SemiBold",
+    700: "Bold",
+    900: "Black"
+  );
+
+  @each $weight, $suffix in $weights {
+    @font-face {
+      font-family: "Red Hat Display";
+      font-style: normal;
+      font-display: swap;
+      font-weight: $weight;
+      src: url("/public/fonts/RedHatDisplay/RedHatDisplay#{$suffix}.ttf");
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Brittany Signature", sans-serif, system-ui;
+  }
+
+  .text-brittany {
+    font-family: "Brittany Signature", sans-serif, system-ui;
+  }
+
+  * {
+    font-family: "Red Hat Display", sans-serif, system-ui;
+  }
+</style>
+
+<script>
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle("dark");
+    const isDark = document.documentElement.classList.contains("dark");
+    localStorage.setItem("darkMode", String(isDark));
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const darkMode = localStorage.getItem("darkMode") === "true";
+    if (darkMode) document.documentElement.classList.add("dark");
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) themeToggle.addEventListener("click", toggleDarkMode);
+  });
+</script>

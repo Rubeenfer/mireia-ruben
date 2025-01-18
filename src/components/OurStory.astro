@@ -1,0 +1,60 @@
+---
+import { translations } from "../i18n/translations";
+
+type LanguageCode = "es" | "ca" | "en";
+interface Props {
+  lang?: LanguageCode;
+}
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
+---
+
+<section id="our-story" class="section">
+  <div class="section-container">
+    <h2 class="heading-2">
+      {t.ourStory.title}
+    </h2>
+    <div class="section-content">
+      <p class="paragraph">
+        {t.ourStory.paragraph1}
+      </p>
+      <p class="paragraph">
+        {t.ourStory.paragraph2}
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    @apply bg-our-story-2 flex items-center justify-center;
+    @apply dark:bg-our-story-dark-2;
+  }
+
+  .section-container {
+    @apply container flex min-w-[100dvw] flex-col gap-10 py-20;
+    @apply bg-our-story-mobile bg-cover bg-fixed bg-no-repeat transition-all duration-300;
+    @apply md:bg-our-story md:bg-[length:40%] md:bg-local md:bg-[2%_center] lg:bg-[length:30%] xl:bg-[length:25%];
+    @apply dark:bg-our-story-dark-mobile dark:md:bg-our-story-dark dark:md:bg-[98%_top];
+  }
+
+  .heading-2 {
+    @apply mb-8 text-center text-3xl font-bold tracking-[.25em] text-black dark:text-white;
+    @apply sm:text-4xl md:text-5xl; /*
+    text-shadow: 0 2px 5px rgba(249, 245, 240); */
+  }
+
+  .section-content {
+    @apply mx-auto max-w-[300px] rounded-lg bg-white p-6 text-center shadow-lg dark:bg-gray-700;
+    @apply sm:max-w-xl sm:p-8;
+    @apply md:max-w-2xl;
+  }
+
+  .paragraph {
+    @apply mb-4 text-gray-700 dark:text-gray-300;
+  }
+
+  .paragraph:last-child {
+    @apply mb-0;
+  }
+</style>

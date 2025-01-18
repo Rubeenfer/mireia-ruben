@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets"
+import { collaborators } from "../constants/collaborators.ts"
+---
+
+<section id='collaborators' class='py-16 bg-gray-900 text-white'>
+  <div class='container mx-auto px-4'>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      {
+        collaborators.map((collaborator) => (
+          <div class='bg-gray-800 rounded-lg shadow-lg p-6 flex items-start'>
+            <div class='mr-4 bg-white p-3 rounded-full'>
+              <Image
+                alt='Catering icon'
+                class='w-8 h-8 text-secondary'
+                id='catering'
+                src={collaborator.icon}
+              />
+            </div>
+            <div>
+              <a
+                href={`https://${collaborator.link}`}
+                class='text-lg font-medium text-gray-100 hover:underline'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {collaborator.name}
+              </a>
+              <p class='text-gray-300'>{collaborator.phone}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

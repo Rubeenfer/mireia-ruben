@@ -1,0 +1,36 @@
+---
+import { translations } from "../i18n/translations";
+import Timeline from "./Timeline.astro";
+
+type LanguageCode = "es" | "ca" | "en";
+interface Props {
+  lang?: LanguageCode;
+}
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
+---
+
+<section id="schedule" class="section">
+  <div class="section-container">
+    <h2 class="heading-2">
+      {t.schedule.title}
+    </h2>
+    <Timeline />
+  </div>
+</section>
+
+<style>
+  .section {
+    @apply flex h-[580px] items-start justify-center bg-schedule bg-cover bg-fixed bg-bottom bg-no-repeat py-20 transition-all duration-300;
+    @apply lg:h-[50dvw];
+    @apply dark:bg-dark dark:bg-schedule-dark;
+  }
+  .section-container {
+    @apply container flex flex-col gap-10;
+  }
+  .heading-2 {
+    @apply mb-8 text-center text-3xl font-bold tracking-[.25em] text-black;
+    @apply sm:text-4xl md:text-5xl;
+    @apply dark:text-white;
+  }
+</style>

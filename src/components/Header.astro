@@ -1,0 +1,114 @@
+---
+import { Logo } from "../icons"
+import ThemeToogle from "./ThemeToogle.astro"
+import { Image } from "astro:assets"
+import { translations } from "../i18n/translations"
+
+type LanguageCode = "es" | "ca" | "en"
+interface Props {
+  lang?: LanguageCode
+}
+const { lang = "es" }: Props = Astro.props
+const t = translations[lang]
+---
+
+<header
+  class='fixed top-0 left-0 right-0 bg-opacity-90 bg-cream dark:bg-gray-900 dark:bg-opacity-90 shadow-md z-50 transition-colors duration-300'
+>
+  <div class='container mx-auto px-4 py-4'>
+    <div class='flex justify-between items-center'>
+      <a href='#' class='text-2xl font-bold text-burgundy dark:text-gold'>
+        <Image
+          id='logo'
+          alt='logo'
+          class='w-16 h-16 text-secondary'
+          src={Logo}
+        />
+      </a>
+
+      <nav class='hidden md:flex space-x-6'>
+        {
+          Object.entries(t.nav).map(([key, value]) => (
+            <a
+              href={`#${key}`}
+              class='text-gray-700 dark:text-gray-300 hover:text-burgundy dark:hover:text-gold transition-colors duration-300'
+            >
+              {value}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class='flex items-center space-x-4'>
+        <select
+          id='language-select'
+          class='bg-cream dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md px-2 py-1 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-burgundy dark:focus:ring-gold'
+        >
+          <option value='es' selected={lang === "es"}>ES</option>
+          <option value='ca' selected={lang === "ca"}>CA</option>
+          <option value='en' selected={lang === "en"}>EN</option>
+        </select>
+
+        <ThemeToogle />
+      </div>
+    </div>
+  </div>
+
+  <div
+    id='mobile-menu'
+    class='hidden md:hidden bg-cream dark:bg-gray-900 shadow-md'
+  >
+    <nav class='container mx-auto px-4 py-2 flex flex-col space-y-2'>
+      {
+        Object.entries(t.nav).map(([key, value]) => (
+          <a
+            href={`#${key}`}
+            class='text-gray-700 dark:text-gray-300 hover:text-burgundy dark:hover:text-gold transition-colors duration-300'
+          >
+            {value}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { Logo, WhiteLogo } from "../icons"
+
+  const menuToggle = document.getElementById("menu-toggle") as HTMLElement
+  const mobileMenu = document.getElementById("mobile-menu") as HTMLElement
+  const languageSelect = document.getElementById(
+    "language-select"
+  ) as HTMLSelectElement
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden")
+  })
+
+  const mobileLinks = mobileMenu.querySelectorAll("a")
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden")
+    })
+  })
+
+  languageSelect.addEventListener("change", (event) => {
+    const newLang = (event.target as HTMLSelectElement).value
+    window.location.href = newLang === "es" ? "/" : `/${newLang}`
+  })
+
+  const updateLogo = () => {
+    const logoElement = document.getElementById("logo") as HTMLImageElement
+    const isDark = document.documentElement.classList.contains("dark")
+    console.log(isDark)
+    logoElement.src = isDark ? WhiteLogo.src : Logo.src
+  }
+  updateLogo()
+
+  const observer = new MutationObserver(updateLogo)
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  })
+</script>

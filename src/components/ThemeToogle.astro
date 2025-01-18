@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets"
+import { DayIcon } from "../icons"
+---
+
+<button
+  id='theme-toggle'
+  class='p-2 rounded-full bg-cream dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-burgundy dark:focus:ring-gold'
+>
+  <Image alt='Theme icon' class='w-6 h-6 text-secondary' src={DayIcon} />
+</button>

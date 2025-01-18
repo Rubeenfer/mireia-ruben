@@ -1,0 +1,51 @@
+---
+import { translations } from "../i18n/translations";
+import CountdownTimer from "./CountdownTimer";
+
+type LanguageCode = "es" | "ca" | "en";
+interface Props {
+  lang?: LanguageCode;
+}
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
+
+const weddingDate = new Date("2025-04-05T13:00:00");
+---
+
+<section class="section">
+  <div class="background-blur"></div>
+  <h1 class="heading-1">Mireia & Rubén</h1>
+  <div class="box">
+    <p class="date">{t.hero.date}</p>
+    <p class="location">
+      {t.hero.location}
+    </p>
+    <CountdownTimer
+      client:load
+      targetDate={weddingDate}
+      translations={t.countdown}
+    />
+  </div>
+</section>
+
+<style>
+  .section {
+    @apply bg-hero relative flex min-h-dvh flex-col items-center justify-end bg-cover bg-top;
+    @apply dark:bg-hero-dark;
+  }
+  .background-blur {
+    @apply absolute inset-0 z-0 bg-black opacity-40;
+  }
+  .heading-1 {
+    @apply z-10 m-auto text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl;
+  }
+  .box {
+    @apply z-10 w-full rounded-lg bg-black bg-opacity-30 p-8 text-center text-white backdrop-blur-sm sm:mb-16 sm:w-auto;
+  }
+  .date {
+    @apply mb-2 text-sm font-light sm:text-base;
+  }
+  .location {
+    @apply mb-8 text-lg font-light sm:text-xl;
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+import { translations } from "../i18n/translations";
+
+type LanguageCode = "es" | "ca" | "en";
+interface Props {
+  lang?: LanguageCode;
+}
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
+---
+
+<section id="location-schedule" class="section">
+  <div class="section-container">
+    <h2 class="heading-2">
+      {t.location.title}
+    </h2>
+    <div class="-mx-4 flex flex-wrap">
+      <div class="mb-8 w-full px-4 md:w-1/2">
+        <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-gray-700">
+          <p class="mb-2 text-gray-700 dark:text-gray-300">
+            La Farinera de Sant Lluís
+          </p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Carrer de Sant Lluís, 17600 Figueres, Girona
+          </p>
+          <div class="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.8876568379096!2d2.9584720156631837!3d42.26682797919401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ba8dcf02b4c899%3A0x44017dea8a5d9b0!2sLa%20Farinera%20de%20Sant%20Llu%C3%ADs!5e0!3m2!1sen!2ses!4v1623456789012!5m2!1sen!2ses"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    @apply py-16 dark:bg-gray-800;
+  }
+  .section-container {
+    @apply container mx-auto px-4;
+  }
+  .heading-2 {
+    @apply mb-8 text-center text-3xl font-bold tracking-[.25em] text-black dark:text-white;
+    @apply sm:text-4xl md:text-5xl; /*
+    text-shadow: 0 2px 5px rgba(249, 245, 240); */
+  }
+</style>

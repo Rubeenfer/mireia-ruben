@@ -1,0 +1,84 @@
+---
+import { translations } from "../i18n/translations";
+import {
+  AppetizerIcon,
+  CeremonyIcon,
+  LunchIcon,
+  PartyIcon,
+} from "../icons/index.ts";
+
+type LanguageCode = "es" | "ca" | "en";
+interface Props {
+  lang?: LanguageCode;
+}
+const { lang = "es" }: Props = Astro.props;
+const t = translations[lang];
+---
+
+<div class="card">
+  <div class="line"></div>
+  <ul class="list">
+    <li class="list-element">
+      <span class="time">13:00</span>
+      <div class="icon-container">
+        <CeremonyIcon className="h-7 w-7 fill-black dark:fill-white" />
+      </div>
+      <span class="event">
+        {t.schedule.ceremony}
+      </span>
+    </li>
+    <li class="list-element">
+      <span class="time">14:00</span>
+      <div class="icon-container">
+        <AppetizerIcon className="h-7 w-7 fill-black dark:fill-white" />
+      </div>
+      <span class="event">{t.schedule.appetizer}</span>
+    </li>
+    <li class="list-element">
+      <span class="time">17:00</span>
+      <div class="icon-container">
+        <LunchIcon className="h-7 w-7 fill-black dark:fill-white" />
+      </div>
+      <span class="event">{t.schedule.lunch}</span>
+    </li>
+    <li class="list-element">
+      <span class="time">20:00</span>
+      <div class="icon-container">
+        <PartyIcon className="h-7 w-7 fill-black dark:fill-white" />
+      </div>
+      <span class="event">{t.schedule.party}</span>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .card {
+    @apply mx-auto max-w-[300px] rounded-lg bg-white p-6 text-center shadow-lg;
+    @apply sm:max-w-xl sm:p-6 md:max-w-2xl;
+    @apply dark:bg-gray-700;
+
+    @apply relative mx-auto max-w-sm px-14 py-6;
+  }
+  .line {
+    @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-black;
+    @apply dark:bg-white;
+  }
+  .list {
+    @apply space-y-6;
+  }
+  .list-element {
+    @apply flex w-64 items-center justify-around;
+  }
+  .time {
+    @apply w-1/3 text-left text-black;
+    @apply dark:text-white;
+  }
+  .icon-container {
+    @apply z-10 flex w-1/3 items-center justify-center bg-white p-1;
+    @apply dark:bg-gray-700;
+  }
+  .event {
+    @apply w-1/3 text-right text-black;
+    @apply dark:text-white;
+  }
+</style>

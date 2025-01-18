@@ -1,0 +1,13 @@
+---
+import Collaborators from "./Collaborators.astro"
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class='bg-gray-900 text-white py-8'>
+  <Collaborators />
+  <div class='container mx-auto px-4 text-center'>
+    <p class='mb-2'>&copy; {currentYear} Mireia & Rubén's Wedding</p>
+    <p>Designed with love for our special day</p>
+  </div>
+</footer>
