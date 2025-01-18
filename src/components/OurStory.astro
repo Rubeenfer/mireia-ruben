@@ -10,10 +10,7 @@ const t = translations[lang];
 ---
 
 <section id="our-story" class="section">
-  <div class="mb-[-50px] flex min-h-[50px]">
-    <div class="top-overlay bg-topLeft dark:bg-darkTopLeft"></div>
-    <div class="top-overlay bg-topRight dark:bg-darkTopRight"></div>
-  </div>
+  <div class="overlay top-overlay"></div>
   <div class="section-container">
     <h2 class="heading-2">
       {t.ourStory.title}
@@ -27,28 +24,31 @@ const t = translations[lang];
       </p>
     </div>
   </div>
-  <div class="flex">
-    <div class="bottom-overlay bg-bottomLeft dark:bg-darkBottomLeft"></div>
-    <div class="bottom-overlay bg-bottomRight dark:bg-darkBottomRight"></div>
-  </div>
+  <div class="overlay bottom-overlay"></div>
 </section>
 
 <style>
   .section {
     @apply bg-olive flex flex-col items-center justify-center;
-    @apply dark:bg-darkOurStory2;
+    @apply dark:bg-night;
   }
-
+  .overlay {
+    @apply z-20 flex min-h-16 min-w-[50dvw];
+  }
+  .top-overlay {
+    @apply bg-oliveOverlay -mb-16 mr-auto hidden md:flex;
+    @apply dark:bg-nightOverlay dark:ml-auto dark:mr-0;
+  }
   .bottom-overlay {
-    @apply mt-[-50px] flex min-h-[50px] min-w-[50dvw];
-    @apply z-20;
+    @apply bg-oliveOverlayReverse -mt-16 mr-auto hidden md:flex;
+    @apply dark:bg-nightOverlayReverse dark:ml-auto dark:mr-0;
   }
 
   .section-container {
-    @apply container flex min-w-[100dvw] flex-col gap-10 py-20;
-    @apply bg-ourStoryMobile bg-cover bg-fixed bg-no-repeat transition-all duration-300;
+    @apply container flex min-h-[500px] min-w-[100dvw] flex-col justify-evenly gap-10 py-20;
+    @apply bg-ourStoryMobile bg-cover bg-fixed bg-center bg-no-repeat transition-all duration-300;
     @apply md:bg-ourStory md:bg-[length:40%] md:bg-local md:bg-[2%_center] lg:bg-[length:30%] xl:bg-[length:25%];
-    @apply dark:bg-darkOurStoryMobile dark:md:bg-darkOurStory dark:md:bg-[98%_top];
+    @apply dark:bg-darkOurStoryMobile dark:md:bg-darkOurStory dark:md:bg-[98%_center];
   }
 
   .section-content {
