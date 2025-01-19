@@ -10,7 +10,7 @@ const t = translations[lang];
 
 <header class="header">
   <div class="header-container">
-    <div class="flex items-center justify-center">
+    <div class="menu-container">
       <nav class="navList">
         {
           Object.entries(t.nav).map(([key, value]) => (
@@ -23,7 +23,7 @@ const t = translations[lang];
       <a href="#" class="logo">
         <div class="triangle"></div>
         <Logo
-          styles="h-28 w-28 lg:w-40 lg:h-40  fill-dark dark:fill-cream absolute top-0"
+          class="dark:fill-cream md:left-[calc(50% - 40px)] absolute left-0 top-0 h-28 w-28 fill-dark lg:h-40 lg:w-40"
         />
       </a>
 
@@ -33,36 +33,22 @@ const t = translations[lang];
       </div>
     </div>
   </div>
-
-  <div
-    id="mobile-menu"
-    class="bg-cream hidden shadow-md dark:bg-gray-900 md:hidden"
-  >
-    <nav class="container mx-auto flex flex-col space-y-2 px-4 py-2">
-      {
-        Object.entries(t.nav).map(([key, value]) => (
-          <a
-            href={`#${key}`}
-            class="hover:text-burgundy dark:hover:text-gold text-gray-700 transition-colors duration-300 dark:text-gray-300"
-          >
-            {value}
-          </a>
-        ))
-      }
-    </nav>
-  </div>
 </header>
 
 <style>
+  .menu-container {
+    @apply flex items-center justify-end md:justify-center;
+  }
+
   .header {
-    @apply bg-olive fixed left-0 right-0 top-0 z-50 bg-opacity-95 shadow-md transition-colors duration-300;
+    @apply bg-olive fixed left-0 right-0 top-0 z-50 max-w-[100dvw] bg-opacity-95 shadow-md transition-colors duration-300;
     @apply dark:bg-dark dark:bg-opacity-95;
   }
   .header-container {
     @apply m-auto max-w-screen-xl px-3 py-3 lg:px-6 lg:py-6;
   }
   .navList {
-    @apply hidden w-2/5;
+    @apply hidden w-0 md:w-2/5;
     @apply md:flex md:items-center md:justify-between lg:justify-start lg:space-x-8 xl:space-x-10;
   }
   .navItem {
@@ -70,30 +56,15 @@ const t = translations[lang];
     @apply dark:text-cream dark:hover:text-leaf;
   }
   .logo {
-    @apply flex w-1/5 items-center justify-center;
+    @apply flex w-0 items-center justify-center md:w-1/5;
   }
   .triangle {
     @apply border-t-olive absolute top-14 border-[3.2rem] border-b-0 border-x-transparent border-opacity-95;
-    @apply transition-colors duration-300 dark:border-t-dark;
+    @apply right-0 top-14 w-0 transition-colors duration-300 dark:border-t-dark;
     @apply lg:top-20 lg:border-[4.5rem] lg:border-b-0;
+    @apply left-[0.3rem] md:left-0 md:me-auto md:ms-auto;
   }
   .options {
-    @apply flex w-2/5 items-center justify-end gap-10;
+    @apply flex w-full items-center justify-end gap-10 md:w-2/5;
   }
 </style>
-
-<script>
-  const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
-  const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
-
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  });
-</script>
