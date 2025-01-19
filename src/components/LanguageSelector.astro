@@ -1,0 +1,30 @@
+---
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
+---
+
+<div class="select-container">
+  <select id="select" class="select">
+    <option value="es" selected={lang === "es"}>ES</option>
+    <option value="ca" selected={lang === "ca"}>CA</option>
+    <option value="en" selected={lang === "en"}>EN</option>
+  </select>
+</div>
+
+<style>
+  .select-container {
+    @apply bg-leaf dark:bg-sky rounded-md px-2 py-1;
+  }
+  .select {
+    @apply bg-leaf text-cream w-12 text-sm;
+    @apply focus:ring-leaf focus:outline-none;
+    @apply dark:bg-sky dark:focus:ring-sky;
+  }
+</style>
+
+<script>
+  const languageSelect = document.getElementById("select") as HTMLSelectElement;
+  languageSelect.addEventListener("change", (event) => {
+    const newLang = (event.target as HTMLSelectElement).value;
+    window.location.href = newLang === "es" ? "/" : `/${newLang}`;
+  });
+</script>

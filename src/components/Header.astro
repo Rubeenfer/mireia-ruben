@@ -2,6 +2,7 @@
 import { Logo } from "../icons";
 import ThemeToogle from "./ThemeToogle.astro";
 import { translations } from "../i18n/translations";
+import LanguageSelector from "./LanguageSelector.astro";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
@@ -27,16 +28,8 @@ const t = translations[lang];
       </a>
 
       <div class="options">
-        <select
-          id="language-select"
-          class="bg-cream focus:ring-burgundy dark:focus:ring-gold rounded-md border border-gray-300 px-2 py-1 text-gray-700 focus:outline-none focus:ring-2 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
-        >
-          <option value="es" selected={lang === "es"}>ES</option>
-          <option value="ca" selected={lang === "ca"}>CA</option>
-          <option value="en" selected={lang === "en"}>EN</option>
-        </select>
-
         <ThemeToogle />
+        <LanguageSelector lang={lang} />
       </div>
     </div>
   </div>
@@ -92,9 +85,6 @@ const t = translations[lang];
 <script>
   const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
   const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
-  const languageSelect = document.getElementById(
-    "language-select",
-  ) as HTMLSelectElement;
 
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
@@ -105,10 +95,5 @@ const t = translations[lang];
     link.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
     });
-  });
-
-  languageSelect.addEventListener("change", (event) => {
-    const newLang = (event.target as HTMLSelectElement).value;
-    window.location.href = newLang === "es" ? "/" : `/${newLang}`;
   });
 </script>
