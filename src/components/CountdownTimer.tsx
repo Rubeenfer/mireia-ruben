@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface CountdownProps {
   targetDate: Date;
@@ -39,7 +39,7 @@ const CountdownTimer: React.FC<CountdownProps> = ({
     value === 1 ? interval.slice(0, -1) : interval;
 
   return (
-    <div className="flex justify-center space-x-4 text-white">
+    <div className="text-cream flex justify-center space-x-4">
       {Object.keys(timeLeft).length === 0 ? (
         <span className="text-2xl font-light">The wedding has started!</span>
       ) : (

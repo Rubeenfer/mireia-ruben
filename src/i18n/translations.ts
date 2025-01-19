@@ -2,11 +2,10 @@ export const translations = {
   es: {
     nav: {
       ourStory: "Nuestra Historia",
-      rsvp: "Confirmar asistencia",
-      locationSchedule: "¿Dónde?",
-      gallery: "Galería",
       proposal: "La Propuesta",
-      collaborators: "Colaboradores",
+      location: "¿Dónde?",
+      schedule: "Cúando?",
+      how: "Cómo?",
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",

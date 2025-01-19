@@ -1,17 +1,17 @@
-import AppetizerIcon from './appetizer.astro';
+import AppetizerIcon from './Appetizer.astro';
 import CateringIcon from './catering.svg';
-import CeremonyIcon from './ceremony.astro';
+import CeremonyIcon from './Ceremony.astro';
 import DayIcon from './day.svg';
 import DjIcon from './dj.svg';
+import Farinera from './Farinera.astro';
 import FavIcon from './favicon.svg';
 import LightIcon from './light.svg';
 import LocationIcon from './location.svg';
-import Logo from './logo.svg';
-import LunchIcon from './lunch.astro';
-import PartyIcon from './party.astro';
+import Logo from './Logo.astro';
+import LunchIcon from './Lunch.astro';
+import PartyIcon from './Party.astro';
 import PhotographIcon from './photograph.svg';
 import WeddingDressIcon from './wedding_dress.svg';
-import WhiteLogo from './logo_white.svg';
 
 export {
   AppetizerIcon,
@@ -19,6 +19,7 @@ export {
   CeremonyIcon,
   DayIcon,
   DjIcon,
+  Farinera,
   FavIcon,
   LightIcon,
   LocationIcon,
@@ -27,5 +28,4 @@ export {
   PartyIcon,
   PhotographIcon,
   WeddingDressIcon,
-  WhiteLogo,
 };

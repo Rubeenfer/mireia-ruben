@@ -1,6 +1,6 @@
 ---
 import { translations } from "../i18n/translations";
-import Farinera from "../icons/farinera.astro";
+import { Farinera } from "../icons";
 
 type LanguageCode = "es" | "ca" | "en";
 interface Props {
@@ -15,7 +15,7 @@ const MAP_PARAMETERS =
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
 
-<section id="location-schedule" class="section">
+<section id="location" class="section">
   <div class="section-container">
     <h2 class="heading-2">
       {t.location.title}

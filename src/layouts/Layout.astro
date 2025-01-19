@@ -33,18 +33,10 @@ const t = translations[lang];
 
 <style is:global>
   :root {
-    --color-cream: #f9f5f0;
     --color-gold: #d4af37;
-    --color-burgundy: #800020;
+    --color-burgundy: rgb(128, 0, 32);
   }
 
-  .bg-cream {
-    background-color: var(--color-cream);
-  }
-  .bg-cream-80 {
-    opacity: 0.8;
-    background-color: var(--color-cream);
-  }
   .text-gold {
     color: var(--color-gold);
   }
@@ -103,11 +95,11 @@ const t = translations[lang];
 
   .heading-1 {
     font-family: "Brittany Signature", sans-serif, system-ui;
-    @apply z-10 m-auto text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl;
+    @apply text-cream z-10 m-auto text-5xl sm:text-7xl md:text-8xl lg:text-9xl;
   }
   .heading-2 {
     font-family: "Kalam", sans-serif, system-ui;
-    @apply m-0 text-center text-3xl text-black dark:text-white;
+    @apply dark:text-cream m-0 text-center text-3xl text-dark;
     @apply /* text-shadow: 0 2px 5px rgba(249, 245, 240); */ sm:text-4xl md:text-5xl;
   }
 

@@ -1,45 +1,30 @@
 ---
 import { Logo } from "../icons";
 import ThemeToogle from "./ThemeToogle.astro";
-import { Image } from "astro:assets";
 import { translations } from "../i18n/translations";
 
-type LanguageCode = "es" | "ca" | "en";
-interface Props {
-  lang?: LanguageCode;
-}
-const { lang = "es" }: Props = Astro.props;
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 ---
 
-<header
-  class="bg-cream fixed left-0 right-0 top-0 z-50 bg-opacity-90 shadow-md transition-colors duration-300 dark:bg-gray-900 dark:bg-opacity-90"
->
-  <div class="container mx-auto px-4 py-4">
-    <div class="flex items-center justify-between">
-      <a href="#" class="text-burgundy dark:text-gold text-2xl font-bold">
-        <Image
-          id="logo"
-          alt="logo"
-          class="h-16 w-16 text-secondary"
-          src={Logo}
-        />
-      </a>
-
-      <nav class="hidden space-x-6 md:flex">
+<header class="header">
+  <div class="header-container">
+    <div class="flex items-center justify-center">
+      <nav class="navList">
         {
           Object.entries(t.nav).map(([key, value]) => (
-            <a
-              href={`#${key}`}
-              class="text-kalam dark:hover:text-gold font-light text-gray-700 transition-colors duration-300 dark:text-gray-300"
-            >
+            <a href={`#${key}`} class="navItem text-kalam">
               {value}
             </a>
           ))
         }
       </nav>
+      <a href="#" class="logo">
+        <div class="triangle"></div>
+        <Logo styles="h-40 w-40 fill-dark dark:fill-cream absolute top-0" />
+      </a>
 
-      <div class="flex items-center space-x-4">
+      <div class="options">
         <select
           id="language-select"
           class="bg-cream focus:ring-burgundy dark:focus:ring-gold rounded-md border border-gray-300 px-2 py-1 text-gray-700 focus:outline-none focus:ring-2 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
@@ -73,9 +58,34 @@ const t = translations[lang];
   </div>
 </header>
 
-<script>
-  import { Logo, WhiteLogo } from "../icons";
+<style>
+  .header {
+    @apply bg-olive fixed left-0 right-0 top-0 z-50 bg-opacity-95 shadow-md transition-colors duration-300;
+    @apply dark:bg-dark dark:bg-opacity-95;
+  }
+  .header-container {
+    @apply m-auto w-[95dvw] px-5 py-5;
+  }
+  .navList {
+    @apply hidden w-2/5 space-x-6 md:flex;
+  }
+  .logo {
+    @apply flex w-1/5 items-center justify-center;
+  }
+  .triangle {
+    @apply border-t-olive absolute top-20 border-[4.5rem] border-b-0 border-t-[4.5rem] border-x-transparent border-opacity-95;
+    @apply transition-colors duration-300 dark:border-t-dark;
+  }
+  .options {
+    @apply flex w-2/5 items-center justify-end gap-10;
+  }
+  .navItem {
+    @apply hover:text-cream text-lg font-light text-dark transition-colors duration-300;
+    @apply dark:text-cream dark:hover:text-leaf;
+  }
+</style>
 
+<script>
   const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
   const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
   const languageSelect = document.getElementById(
@@ -96,19 +106,5 @@ const t = translations[lang];
   languageSelect.addEventListener("change", (event) => {
     const newLang = (event.target as HTMLSelectElement).value;
     window.location.href = newLang === "es" ? "/" : `/${newLang}`;
-  });
-
-  const updateLogo = () => {
-    const logoElement = document.getElementById("logo") as HTMLImageElement;
-    const isDark = document.documentElement.classList.contains("dark");
-    console.log(isDark);
-    logoElement.src = isDark ? WhiteLogo.src : Logo.src;
-  };
-  updateLogo();
-
-  const observer = new MutationObserver(updateLogo);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
   });
 </script>
