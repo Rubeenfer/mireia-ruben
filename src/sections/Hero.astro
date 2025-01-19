@@ -2,11 +2,7 @@
 import { translations } from "../i18n/translations";
 import CountdownTimer from "../components/CountdownTimer";
 
-type LanguageCode = "es" | "ca" | "en";
-interface Props {
-  lang?: LanguageCode;
-}
-const { lang = "es" }: Props = Astro.props;
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 
 const weddingDate = new Date("2025-04-05T13:00:00");

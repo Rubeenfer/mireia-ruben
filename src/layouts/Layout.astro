@@ -5,8 +5,7 @@ export interface Props {
   title: string;
   lang?: "es" | "ca" | "en";
 }
-
-const { title, lang = "es" } = Astro.props;
+const { title, lang = "es" }: Props = Astro.props;
 const t = translations[lang];
 ---
 

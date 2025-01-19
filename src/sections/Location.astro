@@ -2,11 +2,7 @@
 import { translations } from "../i18n/translations";
 import { Farinera } from "../icons";
 
-type LanguageCode = "es" | "ca" | "en";
-interface Props {
-  lang?: LanguageCode;
-}
-const { lang = "es" }: Props = Astro.props;
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 
 const API_KEY = import.meta.env.API_KEY;

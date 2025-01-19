@@ -1,11 +1,7 @@
 ---
 import { translations } from "../i18n/translations";
 
-type LanguageCode = "es" | "ca" | "en";
-interface Props {
-  lang?: LanguageCode;
-}
-const { lang = "es" }: Props = Astro.props;
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 
 const imageUrl =
