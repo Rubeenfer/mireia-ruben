@@ -8,7 +8,7 @@ const t = translations[lang];
 <section id="ourStory" class="section">
   <div class="overlay top-overlay"></div>
   <div class="section-container">
-    <h2 class="heading-2">
+    <h2 class="heading-2 section-content">
       {t.ourStory.title}
     </h2>
     <div class="section-content">
@@ -48,9 +48,9 @@ const t = translations[lang];
   }
 
   .section-content {
-    @apply mx-auto max-w-[300px] rounded-lg px-6 text-center;
-    @apply sm:max-w-xl sm:px-8;
-    @apply md:max-w-2xl;
+    @apply max-w-3xl text-pretty rounded-lg px-6 text-center;
+    @apply sm:px-8 md:ml-auto md:mr-5 md:w-3/5 dark:md:ml-5 lg:mx-auto lg:w-2/5;
+    @apply dark:lg:mx-auto;
   }
 
   .paragraph {
