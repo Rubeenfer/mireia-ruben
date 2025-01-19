@@ -21,7 +21,9 @@ const t = translations[lang];
       </nav>
       <a href="#" class="logo">
         <div class="triangle"></div>
-        <Logo styles="h-40 w-40 fill-dark dark:fill-cream absolute top-0" />
+        <Logo
+          styles="h-28 w-28 lg:w-40 lg:h-40  fill-dark dark:fill-cream absolute top-0"
+        />
       </a>
 
       <div class="options">
@@ -64,24 +66,26 @@ const t = translations[lang];
     @apply dark:bg-dark dark:bg-opacity-95;
   }
   .header-container {
-    @apply m-auto w-[95dvw] px-5 py-5;
+    @apply m-auto max-w-screen-xl px-2 py-2 lg:px-5 lg:py-5;
   }
   .navList {
-    @apply hidden w-2/5 space-x-6 md:flex;
+    @apply hidden w-2/5;
+    @apply md:flex md:justify-between lg:justify-start lg:space-x-8 xl:space-x-10;
+  }
+  .navItem {
+    @apply hover:text-cream text-base font-light text-dark transition-colors duration-300 lg:text-lg;
+    @apply dark:text-cream dark:hover:text-leaf;
   }
   .logo {
     @apply flex w-1/5 items-center justify-center;
   }
   .triangle {
-    @apply border-t-olive absolute top-20 border-[4.5rem] border-b-0 border-t-[4.5rem] border-x-transparent border-opacity-95;
+    @apply border-t-olive absolute top-14 border-[3.2rem] border-b-0 border-x-transparent border-opacity-95;
     @apply transition-colors duration-300 dark:border-t-dark;
+    @apply lg:top-20 lg:border-[4.5rem] lg:border-b-0;
   }
   .options {
     @apply flex w-2/5 items-center justify-end gap-10;
-  }
-  .navItem {
-    @apply hover:text-cream text-lg font-light text-dark transition-colors duration-300;
-    @apply dark:text-cream dark:hover:text-leaf;
   }
 </style>
 

@@ -2,7 +2,7 @@ export const translations = {
   es: {
     nav: {
       ourStory: "Nuestra Historia",
-      proposal: "La Propuesta",
+
       location: "¿Dónde?",
       schedule: "Cúando?",
       how: "Cómo?",
@@ -80,7 +80,6 @@ export const translations = {
       rsvp: "Confirmar assistència",
       locationSchedule: "Ubicació i Horari",
       gallery: "Galeria",
-      proposal: "La Proposta",
       collaborators: "Col·laboradors",
     },
     hero: {
@@ -154,7 +153,6 @@ export const translations = {
       rsvp: "RSVP",
       locationSchedule: "Ubicación y horario",
       gallery: "Gallery",
-      proposal: "The Proposal",
       collaborators: "Collaborators",
     },
     hero: {
