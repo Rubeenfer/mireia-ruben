@@ -8,11 +8,11 @@ interface Props {
 }
 const { lang = "es" }: Props = Astro.props;
 const t = translations[lang];
-const API_KEY = "AIzaSyAhVAqL0ex-PbXdrUkQkFXg58wuY9n5Tqk";
+
+const API_KEY = import.meta.env.API_KEY;
 const MAP_PARAMETERS =
   "q=La+Farinera+Sant+Llu%C3%ADs&maptype=satellite&zoom=15";
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
-const MAPS_URL = `${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`;
 ---
 
 <section id="location-schedule" class="section">
@@ -36,7 +36,7 @@ const MAPS_URL = `${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`;
         <iframe
           class="aspect-square w-full"
           referrerpolicy="no-referrer-when-downgrade"
-          src={MAPS_URL}
+          src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
           allowfullscreen
         >
         </iframe>
@@ -51,22 +51,22 @@ const MAPS_URL = `${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`;
     @apply dark:bg-night_0_100;
   }
   .section-container {
-    @apply container flex min-w-[100dvw] flex-col gap-10 py-20;
+    @apply container flex min-w-[100dvw] flex-col gap-20 py-20;
     @apply dark:bg-night_0_0 bg-cover bg-no-repeat;
   }
 
   .section-content {
     @apply mx-auto flex w-[90dvw] flex-col items-center justify-center gap-10 rounded-lg text-center;
-    @apply sm:max-w-xl md:w-[80dvw] md:max-w-[1000px] md:flex-row;
+    @apply sm:max-w-xl md:max-w-[80dvw] md:flex-row lg:w-[1000px];
   }
 
   .content-1 {
     @apply flex aspect-video w-full flex-col items-center justify-center gap-10;
-    @apply md:w-1/3;
+    @apply md:w-1/2;
   }
   .content-2 {
     @apply aspect-video w-full border-8 border-black;
-    @apply md:w-2/3;
+    @apply md:w-1/2;
   }
 
   .paragraph {
