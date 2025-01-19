@@ -113,18 +113,3 @@ const t = translations[lang];
     font-family: "Red Hat Display", sans-serif, system-ui;
   }
 </style>
-
-<script>
-  function toggleDarkMode() {
-    document.documentElement.classList.toggle("dark");
-    const isDark = document.documentElement.classList.contains("dark");
-    localStorage.setItem("darkMode", String(isDark));
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const darkMode = localStorage.getItem("darkMode") === "true";
-    if (darkMode) document.documentElement.classList.add("dark");
-    const themeToggle = document.getElementById("theme-toggle");
-    if (themeToggle) themeToggle.addEventListener("click", toggleDarkMode);
-  });
-</script>
