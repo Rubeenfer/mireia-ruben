@@ -19,7 +19,7 @@ import {
     <div class="section-content">
       <a href={`https://${collaborators[0].link}`} class="item" target="_blank">
         <div class="icon">
-          <Ring className="h-6 w-6 fill-dark" />
+          <Ring />
         </div>
         <Collaborator
           name={collaborators[0].name}
@@ -28,7 +28,7 @@ import {
       </a>
       <a href={`https://${collaborators[1].link}`} class="item" target="_blank">
         <div class="icon">
-          <Location className="h-6 w-6 fill-dark" />
+          <Location />
         </div>
         <Collaborator
           name={collaborators[1].name}
@@ -37,7 +37,7 @@ import {
       </a>
       <a href={`https://${collaborators[2].link}`} class="item" target="_blank">
         <div class="icon">
-          <Catering className="h-6 w-6 fill-dark" />
+          <Catering />
         </div>
         <Collaborator
           name={collaborators[2].name}
@@ -46,7 +46,7 @@ import {
       </a>
       <a href={`https://${collaborators[3].link}`} class="item" target="_blank">
         <div class="icon">
-          <DJ className="h-6 w-6 fill-dark" />
+          <DJ />
         </div>
         <Collaborator
           name={collaborators[3].name}
@@ -55,7 +55,7 @@ import {
       </a>
       <a href={`https://${collaborators[4].link}`} class="item" target="_blank">
         <div class="icon">
-          <Light className="h-6 w-6" />
+          <Light />
         </div>
         <Collaborator
           name={collaborators[4].name}
@@ -64,7 +64,7 @@ import {
       </a>
       <a href={`https://${collaborators[5].link}`} class="item" target="_blank">
         <div class="icon">
-          <Photo className="h-6 w-6 fill-dark" />
+          <Photo />
         </div>
         <Collaborator
           name={collaborators[5].name}
@@ -73,7 +73,7 @@ import {
       </a>
       <a href={`https://${collaborators[6].link}`} class="item" target="_blank">
         <div class="icon">
-          <Dress className="h-6 w-6 fill-dark" />
+          <Dress />
         </div>
         <Collaborator
           name={collaborators[6].name}
@@ -82,7 +82,7 @@ import {
       </a>
       <a href={`https://${collaborators[7].link}`} class="item" target="_blank">
         <div class="icon">
-          <Shoes className="h-6 w-6 fill-dark" />
+          <Shoes />
         </div>
         <Collaborator
           name={collaborators[7].name}
@@ -111,6 +111,7 @@ import {
   }
   .item {
     @apply flex w-72 items-start rounded-md border-[1px] border-dark p-4 shadow-lg;
-    @apply hover:bg-cream transition-all duration-500 lg:w-1/3 xl:w-1/4;
+    @apply hover:bg-cream dark:border-cream transition-all duration-500 lg:w-1/3 xl:w-1/4;
+    @apply dark:text-cream text-dark dark:hover:text-dark;
   }
 </style>

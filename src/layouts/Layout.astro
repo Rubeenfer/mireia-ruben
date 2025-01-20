@@ -117,4 +117,9 @@ const t = translations[lang];
   * {
     font-family: "Kalam", sans-serif, system-ui;
   }
+  .item:hover > .icon > svg,
+  .item:hover > .icon svg path,
+  .item:hover > .icon svg circle {
+    @apply fill-dark stroke-dark dark:fill-dark dark:stroke-dark;
+  }
 </style>

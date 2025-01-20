@@ -2,7 +2,7 @@
 const { className } = Astro.props;
 ---
 
-<svg class={className} viewBox="0 0 512 512">
+<svg class="svg" viewBox="0 0 512 512">
   <g>
     <path
       d="M379.429,213.995c-14.739-14.776-32.171-26.934-51.474-35.669l81.691-105.941L331.762,0H180.238
@@ -31,3 +31,12 @@ const { className } = Astro.props;
     ></path>
   </g>
 </svg>
+
+<style>
+  .svg {
+    @apply dark:fill-cream h-6 w-6 fill-dark;
+  }
+  .item > .icon > .svg {
+    @apply dark:fill-cream h-6 w-6 fill-dark dark:hover:fill-dark;
+  }
+</style>

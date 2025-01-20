@@ -21,7 +21,8 @@ const t = translations[lang];
         }
       </nav>
       <a href="#" class="logo">
-        <div class="triangle"></div>
+        <div class="triangle common"></div>
+        <div class="triangle2 common"></div>
         <Logo
           class="dark:fill-cream md:left-[calc(50% - 40px)] absolute left-0 top-0 h-28 w-28 fill-dark lg:h-40 lg:w-40"
         />
@@ -42,7 +43,7 @@ const t = translations[lang];
 
   .header {
     @apply bg-olive fixed left-0 right-0 top-0 z-50 max-w-[100dvw] bg-opacity-95 shadow-md transition-colors duration-300;
-    @apply border-b-[1px] border-dark dark:bg-dark dark:bg-opacity-95;
+    @apply dark:border-cream border-b-[1px] border-dark dark:bg-dark dark:bg-opacity-95;
   }
   .header-container {
     @apply m-auto max-w-screen-xl px-3 py-3 lg:px-6 lg:py-6;
@@ -58,11 +59,17 @@ const t = translations[lang];
   .logo {
     @apply flex w-0 items-center justify-center md:w-1/5;
   }
+  .common {
+    @apply absolute left-[0.3rem] right-0 w-0 border-[3.2rem] border-x-transparent transition-colors duration-300;
+    @apply md:left-0 md:me-auto md:ms-auto lg:border-[4.5rem];
+  }
   .triangle {
-    @apply border-t-olive absolute top-14 border-[3.2rem] border-b-0 border-x-transparent border-opacity-95;
-    @apply right-0 top-14 w-0 transition-colors duration-300 dark:border-t-dark;
-    @apply lg:top-20 lg:border-[4.5rem] lg:border-b-0;
-    @apply left-[0.3rem] md:left-0 md:me-auto md:ms-auto;
+    @apply border-t-olive top-14 border-b-0;
+    @apply dark:border-t-dark lg:top-20 lg:border-b-0;
+  }
+  .triangle2 {
+    @apply border-b-olive top-1.5 border-t-0;
+    @apply dark:border-b-dark lg:top-2 lg:border-t-0;
   }
   .options {
     @apply flex w-full items-center justify-end gap-10 md:w-2/5;
