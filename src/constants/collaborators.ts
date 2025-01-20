@@ -1,47 +1,43 @@
-import {
-  CateringIcon,
-  DjIcon,
-  LightIcon,
-  LocationIcon,
-  PhotographIcon,
-  WeddingDressIcon,
-} from "../icons/index.ts"
-
 export const collaborators = [
   {
-    icon: CateringIcon,
-    name: "Criscatering",
-    phone: "972291348",
-    link: "criscatering.com",
+    name: "Unión Suiza",
+    phone: "934 16 11 11",
+    link: "unionsuiza.com",
   },
   {
-    icon: DjIcon,
-    name: "Le Chris Musik",
-    phone: "638606504",
-    link: "www.instagram.com/lechrismusik",
-  },
-  {
-    icon: LightIcon,
-    name: "Sweet dreams",
-    phone: "647973004",
-    link: "www.instagram.com/sweetdreams_productions",
-  },
-  {
-    icon: LocationIcon,
-    name: "Farinera de Sant Lluís",
-    phone: "672142651",
+    name: "Farinera Sant Lluís",
+    phone: "672 14 26 51",
     link: "lafarinerasantlluis.com",
   },
   {
-    icon: PhotographIcon,
+    name: "Criscatering",
+    phone: "972 29 13 48",
+    link: "criscatering.com",
+  },
+  {
+    name: "Le Chris Musik",
+    phone: "638 60 65 04",
+    link: "www.instagram.com/lechrismusik",
+  },
+  {
+    name: "Sweet dreams",
+    phone: "647 97 30 04",
+    link: "www.instagram.com/sweetdreams_productions",
+  },
+  {
     name: "Estudi de llum",
-    phone: "678141203",
+    phone: "678 14 12 03",
     link: "estudidellum.com",
   },
   {
-    icon: WeddingDressIcon,
     name: "Escuer Atelier",
-    phone: "657936006",
+    phone: "657 93 60 06",
     link: "escueratelier.com",
   },
-]
+
+  {
+    name: "The Forest Shoes",
+    phone: "932 17 67 89",
+    link: "www.instagram.com/theforestshoes",
+  },
+];

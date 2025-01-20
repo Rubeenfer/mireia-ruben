@@ -49,10 +49,9 @@ const t = translations[lang];
 
 <style>
   .card {
-    @apply bg-olive rounded-lg p-6 text-center shadow-lg;
+    @apply bg-olive relative flex items-center justify-center p-6 text-center shadow-lg;
+    @apply rounded-md md:aspect-square md:w-80;
     @apply dark:bg-sky;
-    @apply relative flex items-center justify-center p-6;
-    @apply aspect-square w-3/5 rounded-md shadow-md;
   }
   .line {
     @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-dark;

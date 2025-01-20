@@ -1,53 +1,116 @@
 ---
-import { Image } from "astro:assets";
+import Collaborator from "../components/Collaborator.astro";
 import { collaborators } from "../constants/collaborators.ts";
+import {
+  Catering,
+  DJ,
+  Dress,
+  Light,
+  Location,
+  Photo,
+  Ring,
+  Shoes,
+} from "../icons";
 ---
 
 <section id="collaborators" class="section">
-  <div class="section-container m-48">
+  <div class="section-container">
     <h3 class="heading-3">¿Quién ha hecho esto possible?</h3>
     <div class="section-content">
-      {
-        collaborators.map((collaborator) => (
-          <div class="flex items-start rounded-lg bg-gray-800 p-6 shadow-lg">
-            <div class="mr-4 rounded-full bg-white p-3">
-              <Image
-                alt="Catering icon"
-                class="h-8 w-8 text-secondary"
-                id="catering"
-                src={collaborator.icon}
-              />
-            </div>
-            <div>
-              <a
-                href={`https://${collaborator.link}`}
-                class="text-lg font-medium text-gray-100 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {collaborator.name}
-              </a>
-              <p class="text-gray-300">{collaborator.phone}</p>
-            </div>
-          </div>
-        ))
-      }
+      <a href={`https://${collaborators[0].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Ring className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[0].name}
+          phone={collaborators[0].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[1].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Location className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[1].name}
+          phone={collaborators[1].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[2].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Catering className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[2].name}
+          phone={collaborators[2].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[3].link}`} class="item" target="_blank">
+        <div class="icon">
+          <DJ className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[3].name}
+          phone={collaborators[3].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[4].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Light className="h-6 w-6" />
+        </div>
+        <Collaborator
+          name={collaborators[4].name}
+          phone={collaborators[4].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[5].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Photo className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[5].name}
+          phone={collaborators[5].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[6].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Dress className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[6].name}
+          phone={collaborators[6].phone}
+        />
+      </a>
+      <a href={`https://${collaborators[7].link}`} class="item" target="_blank">
+        <div class="icon">
+          <Shoes className="h-6 w-6 fill-dark" />
+        </div>
+        <Collaborator
+          name={collaborators[7].name}
+          phone={collaborators[7].phone}
+        />
+      </a>
     </div>
   </div>
 </section>
 
 <style>
+  .icon {
+    @apply mr-4 rounded-full p-3;
+  }
   .section {
-    @apply bg-day2_100_0 flex items-start justify-center border-t-2 border-dark;
-    @apply dark:bg-night2_0_100 dark:border-cream border-t-2 border-dark;
+    @apply bg-day2_0_0 flex items-start justify-center;
+    @apply dark:bg-night2_0_0;
   }
 
   .section-container {
-    @apply container flex min-w-[100dvw] max-w-lg flex-col gap-32 rounded-md py-20;
+    @apply container flex flex-col gap-32 rounded-md py-20;
     @apply bg-cover bg-no-repeat;
   }
   .section-content {
-    @apply flex flex-wrap items-center justify-center gap-10;
-    @aply;
+    @apply flex flex-wrap items-center justify-center gap-6;
+  }
+  .item {
+    @apply flex w-72 items-start rounded-md border-[1px] border-dark p-4 shadow-lg;
+    @apply hover:bg-cream transition-all duration-500 lg:w-1/3 xl:w-1/4;
   }
 </style>

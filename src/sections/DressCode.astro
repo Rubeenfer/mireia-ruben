@@ -8,53 +8,62 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 ---
 
-<section id="schedule" class="section">
+<section id="location" class="section">
+  <h3 class="heading-3 w-full">¿Cómo hay que ir?</h3>
   <div class="section-container">
-    <h2 class="heading-3">¿Cómo hay que ir?</h2>
-    <div class="flex flex-row items-center justify-center gap-20">
-      <div class="card">
+    <div class="card">
+      <div class="sub-card">
         <Man />
-        <ul class="flex max-w-96 list-disc flex-col gap-5 px-4 text-left">
-          <li>Traje clásico</li>
+        <ul class="list-disc">
+          <li>Con traje lucís aún más guapos</li>
           <li>Acompañado de corbata o pajarita</li>
           <li>Camisa que haga juego.</li>
         </ul>
       </div>
-      <div class="card">
+    </div>
+    <div class="card">
+      <div class="sub-card">
         <Woman />
-        <ul class="flex max-w-96 list-disc flex-col gap-5 px-4 text-left">
+        <ul class="list-disc">
           <li>Vestidos largos o trajes de pantalón elegantes</li>
           <li>
-            En cuanto a los zapatos tened en cuenta que la Farinera de Sant
-            Lluís está rodeada de naturaleza y hay césped por todo el recinto.
+            En cuanto a los zapatos tened en cuenta que hay césped por todo el
+            recinto.
           </li>
           <li>¡Tacones gruesos o bajos serán vuestros mejores aliados!</li>
         </ul>
       </div>
     </div>
   </div>
-  <Image class="video" src={endImage} alt="Descripción de la imagen" />
 </section>
 
+<Image class="video" src={endImage} alt="Descripción de la imagen" />
+
 <style>
-  .video {
-    @apply container z-40 -mb-48 flex h-96 max-w-lg rounded-md border-2 border-dark bg-dark object-cover;
-    @apply dark:border-cream;
-  }
-  .card {
-    @apply flex h-96 w-1/3 flex-col items-center justify-start gap-16 rounded-md border-2 border-dark p-6 shadow-md;
-    @apply dark:border-cream;
-  }
   .section {
-    @apply bg-day2_0_0 flex flex-col items-center justify-center bg-repeat;
-    @apply dark:bg-night2_0_0;
+    @apply bg-day2_0_0 flex min-w-[100dvw] flex-col items-start justify-center;
+    @apply dark:bg-night2_0_100 dark:border-cream;
   }
   .section-container {
-    @apply container flex min-w-[100dvw] flex-col gap-20 p-20;
-    @apply bg-cover bg-no-repeat;
+    @apply container mx-auto flex flex-col items-center gap-16 py-20 md:flex-row;
   }
-  .section-container2 {
-    @apply container -mb-32 flex max-w-lg flex-col gap-20 rounded-md;
-    @apply dark:bg-night_0_0 bg-cover bg-no-repeat;
+  .card {
+    @apply container mx-4 flex flex-col items-center justify-center gap-4;
+  }
+  .sub-card {
+    @apply flex flex-col items-center justify-start gap-10 rounded-md border-[1px] border-dark p-10;
+    @apply h-80 w-[304px] md:w-96;
+  }
+
+  .section-content {
+    @apply flex flex-col items-center justify-center gap-10;
+  }
+
+  .content-1 {
+    @apply flex w-full items-end justify-center gap-4;
+  }
+
+  .paragraph {
+    @apply mb-0 text-pretty text-center font-light text-dark dark:text-gray-300 md:w-80;
   }
 </style>

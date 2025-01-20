@@ -1,35 +1,35 @@
 import AppetizerIcon from './Appetizer.astro';
-import CateringIcon from './catering.svg';
+import Catering from './Catering.astro';
 import CeremonyIcon from './Ceremony.astro';
-import DayIcon from './day.svg';
-import DjIcon from './dj.svg';
+import DJ from './DJ.astro';
+import Dress from './Dress.astro';
 import Farinera from './Farinera.astro';
-import FavIcon from './favicon.svg';
-import LightIcon from './light.svg';
-import LocationIcon from './location.svg';
+import Light from './Light.astro';
+import Location from './Location.astro';
 import Logo from './Logo.astro';
 import LunchIcon from './Lunch.astro';
 import Man from './Man.astro';
 import PartyIcon from './Party.astro';
-import PhotographIcon from './photograph.svg';
-import WeddingDressIcon from './wedding_dress.svg';
+import Photo from './Photo.astro';
+import Ring from './Ring.astro';
+import Shoes from './Shoes.astro';
 import Woman from './Woman.astro';
 
 export {
   AppetizerIcon,
-  CateringIcon,
   CeremonyIcon,
-  DayIcon,
-  DjIcon,
   Farinera,
-  FavIcon,
-  LightIcon,
-  LocationIcon,
   Logo,
   LunchIcon,
   PartyIcon,
-  PhotographIcon,
-  WeddingDressIcon,
   Woman,
   Man,
+  Catering,
+  DJ,
+  Light,
+  Photo,
+  Location,
+  Dress,
+  Ring,
+  Shoes,
 };

@@ -9,11 +9,11 @@
 
 <style>
   .section {
-    @apply bg-day_100_0 flex flex-col items-center justify-center pt-16;
-    @apply dark:bg-night_0_0;
+    @apply bg-day_100_0 flex flex-col items-center justify-center;
+    @apply dark:bg-night_0_0 md:pt-16;
   }
   .video {
-    @apply container z-40 -mb-48 flex h-96 max-w-lg rounded-md border-2 border-dark bg-dark object-cover;
-    @apply dark:border-cream dark:bg-cream;
+    @apply container z-40 -mb-48 flex h-96 min-w-full max-w-full border-y-[1px] border-dark object-cover;
+    @apply dark:border-cream w-auto md:min-w-fit md:rounded-md md:border-x-[1px];
   }
 </style>

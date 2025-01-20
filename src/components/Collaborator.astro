@@ -1,0 +1,15 @@
+---
+const { phone, name } = Astro.props;
+---
+
+<div>
+  <span class="custom font-medium"> {name}</span>
+  <p class="custom font-light">{phone}</p>
+</div>
+
+<style>
+  .custom {
+    @apply text-lg uppercase text-dark;
+    @apply dark:text-cream;
+  }
+</style>

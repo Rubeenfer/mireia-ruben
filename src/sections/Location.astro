@@ -1,8 +1,6 @@
 ---
-import CountdownTimer from "../components/CountdownTimer";
 import Timeline from "../components/Timeline.astro";
 import { translations } from "../i18n/translations";
-import { Farinera } from "../icons";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
@@ -13,50 +11,34 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
 
 <section id="location" class="section">
-  <div class="section-container2 mt-64">
-    <div class="flex">
-      <div class="section-container">
-        <h3 class="heading-3">
-          {t.location.title}
-        </h3>
-        <div class="section-content">
-          <div class="content-1">
-            <a
-              class="w-32"
-              href="https://lafarinerasantlluis.com/es"
-              target="_blank"
-            >
-              <Farinera />
-            </a>
-            <div>
-              <p class="paragraph">{t.location.address1}</p>
-              <p class="paragraph">{t.location.address2}</p>
-            </div>
-          </div>
-
-          <iframe
-            class="content-2"
-            referrerpolicy="no-referrer-when-downgrade"
-            src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
-            allowfullscreen
-          >
-          </iframe>
-        </div>
+  <div class="section-container mt-48">
+    <div class="card">
+      <h3 class="heading-3">¿Dónde se celebrará?</h3>
+      <div class="mx-4 flex flex-col items-center justify-center gap-4">
+        <p class="paragraph">
+          Nos veremos en la antigua farinera de Sant Lluís un lugar encantador
+          en el corazón de Figueres
+        </p>
+        <p class="paragraph">Carrer de Sant Lluís, 17600 Figueres, Girona</p>
+        <iframe
+          class="rounded-md md:aspect-square md:w-80"
+          referrerpolicy="no-referrer-when-downgrade"
+          src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
+          allowfullscreen
+        >
+        </iframe>
       </div>
+    </div>
+    <div class="card">
+      <h2 class="heading-3">
+        {t.schedule.title}
+      </h2>
+      <div class="mx-4 flex flex-col items-center justify-center gap-4">
+        <p class="paragraph">
+          La ceremonia dará comienzo a las 13:00h el día 5 de Abril de 2025
+        </p>
 
-      <div class="section-container">
-        <h2 class="heading-3">
-          {t.schedule.title}
-        </h2>
-        <div class="section-content">
-          <CountdownTimer
-            client:load
-            translations={t.countdown}
-            styles="text-dark dark:text-cream"
-          />
-
-          <Timeline />
-        </div>
+        <Timeline />
       </div>
     </div>
   </div>
@@ -65,29 +47,24 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 <style>
   .section {
     @apply bg-day2_0_100 flex min-w-[100dvw] items-start justify-center;
-    @apply dark:bg-night2_0_100 dark:border-cream border-t-2 border-dark;
-  }
-  .section-container2 {
-    @apply container flex flex-col gap-20 py-20;
-    @apply bg-cover bg-no-repeat;
+    @apply dark:bg-night2_0_100 dark:border-cream border-t-[1px] border-dark;
   }
   .section-container {
-    @apply container flex flex-col justify-between gap-10;
-    @apply bg-cover bg-no-repeat;
+    @apply container flex flex-col gap-16 py-20 md:flex-row;
+  }
+  .card {
+    @apply container flex flex-col justify-between gap-10 bg-cover bg-no-repeat md:w-1/2;
   }
 
   .section-content {
-    @apply flex flex-col items-center justify-center gap-10 rounded-lg;
+    @apply flex flex-col items-center justify-center gap-10;
   }
 
   .content-1 {
     @apply flex w-full items-end justify-center gap-4;
   }
-  .content-2 {
-    @apply aspect-square w-3/5 rounded-md shadow-md;
-  }
 
   .paragraph {
-    @apply mb-0 text-dark dark:text-gray-300;
+    @apply mb-0 text-pretty text-center font-light text-dark dark:text-gray-300 md:w-80;
   }
 </style>
