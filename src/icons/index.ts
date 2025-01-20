@@ -9,9 +9,11 @@ import LightIcon from './light.svg';
 import LocationIcon from './location.svg';
 import Logo from './Logo.astro';
 import LunchIcon from './Lunch.astro';
+import Man from './Man.astro';
 import PartyIcon from './Party.astro';
 import PhotographIcon from './photograph.svg';
 import WeddingDressIcon from './wedding_dress.svg';
+import Woman from './Woman.astro';
 
 export {
   AppetizerIcon,
@@ -28,4 +30,6 @@ export {
   PartyIcon,
   PhotographIcon,
   WeddingDressIcon,
+  Woman,
+  Man,
 };

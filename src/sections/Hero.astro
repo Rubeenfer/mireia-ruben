@@ -4,8 +4,6 @@ import CountdownTimer from "../components/CountdownTimer";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
-
-const weddingDate = new Date("2025-04-05T13:00:00");
 ---
 
 <section class="section">
@@ -18,8 +16,8 @@ const weddingDate = new Date("2025-04-05T13:00:00");
     </p>
     <CountdownTimer
       client:load
-      targetDate={weddingDate}
       translations={t.countdown}
+      styles="text-cream"
     />
   </div>
 </section>
@@ -30,11 +28,12 @@ const weddingDate = new Date("2025-04-05T13:00:00");
     @apply dark:bg-darkHero bg-fixed dark:bg-bottom;
   }
   .background-blur {
-    @apply absolute inset-0 z-0 bg-black opacity-40;
+    @apply absolute inset-0 z-0 bg-dark opacity-20;
   }
 
   .box {
-    @apply text-cream z-10 w-full rounded-lg bg-black bg-opacity-30 p-8 text-center backdrop-blur-sm sm:mb-16 sm:w-auto;
+    @apply bg-leaf text-cream z-10 w-full rounded-lg bg-opacity-20 p-8 text-center backdrop-blur-sm sm:mb-16 sm:w-auto;
+    @appy dark:bg-opacity-50 dark:bg-dark;
   }
   .date {
     @apply mb-2 text-sm font-light sm:text-base;

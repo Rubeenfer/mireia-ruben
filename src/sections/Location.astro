@@ -1,4 +1,6 @@
 ---
+import CountdownTimer from "../components/CountdownTimer";
+import Timeline from "../components/Timeline.astro";
 import { translations } from "../i18n/translations";
 import { Farinera } from "../icons";
 
@@ -6,36 +8,55 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 
 const API_KEY = import.meta.env.API_KEY;
-const MAP_PARAMETERS =
-  "q=La+Farinera+Sant+Llu%C3%ADs&maptype=satellite&zoom=15";
+const MAP_PARAMETERS = "q=La+Farinera+Sant+Llu%C3%ADs&maptype=roadmap&zoom=15";
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
 
 <section id="location" class="section">
-  <div class="section-container">
-    <h2 class="heading-2">
-      {t.location.title}
-    </h2>
-    <div class="section-content">
-      <div class="content-1">
-        <a
-          class="w-64"
-          href="https://lafarinerasantlluis.com/es"
-          target="_blank"><Farinera /></a
-        >
-        <div>
-          <p class="paragraph">{t.location.address1}</p>
-          <p class="paragraph">{t.location.address2}</p>
+  <div class="section-container2 mt-32">
+    <div class="flex">
+      <div class="section-container">
+        <h3 class="heading-3">
+          {t.location.title}
+        </h3>
+        <div class="section-content">
+          <div class="content-1">
+            <a
+              class="w-32"
+              href="https://lafarinerasantlluis.com/es"
+              target="_blank"
+            >
+              <Farinera />
+            </a>
+            <div>
+              <p class="paragraph">{t.location.address1}</p>
+              <p class="paragraph">{t.location.address2}</p>
+            </div>
+          </div>
+
+          <iframe
+            class="content-2"
+            referrerpolicy="no-referrer-when-downgrade"
+            src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
+            allowfullscreen
+          >
+          </iframe>
         </div>
       </div>
-      <div class="content-2">
-        <iframe
-          class="aspect-square w-full"
-          referrerpolicy="no-referrer-when-downgrade"
-          src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
-          allowfullscreen
-        >
-        </iframe>
+
+      <div class="section-container">
+        <h2 class="heading-3">
+          {t.schedule.title}
+        </h2>
+        <div class="section-content">
+          <CountdownTimer
+            client:load
+            translations={t.countdown}
+            styles="text-dark dark:text-cream"
+          />
+
+          <Timeline />
+        </div>
       </div>
     </div>
   </div>
@@ -43,29 +64,30 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 
 <style>
   .section {
-    @apply bg-day_100_0 flex flex-col items-center justify-center;
-    @apply dark:bg-night_0_100;
+    @apply bg-day2_0_100 flex min-w-[100dvw] items-start justify-center;
+    @apply dark:bg-night2_0_100;
+  }
+  .section-container2 {
+    @apply container flex flex-col gap-20 py-20;
+    @apply bg-cover bg-no-repeat;
   }
   .section-container {
-    @apply container flex min-w-[100dvw] flex-col gap-20 py-20;
-    @apply dark:bg-night_0_0 bg-cover bg-no-repeat;
+    @apply container flex flex-col justify-between gap-10;
+    @apply bg-cover bg-no-repeat;
   }
 
   .section-content {
-    @apply mx-auto flex w-[90dvw] flex-col items-center justify-center gap-10 rounded-lg text-center;
-    @apply sm:max-w-xl md:max-w-[80dvw] md:flex-row lg:w-[1000px];
+    @apply flex flex-col items-center justify-center gap-10 rounded-lg;
   }
 
   .content-1 {
-    @apply flex aspect-video w-full flex-col items-center justify-center gap-10;
-    @apply md:w-1/2;
+    @apply flex w-full items-end justify-center gap-4;
   }
   .content-2 {
-    @apply aspect-video w-full border-8 border-black;
-    @apply md:w-1/2;
+    @apply aspect-square w-3/5 rounded-md shadow-md;
   }
 
   .paragraph {
-    @apply mb-0 text-gray-700 dark:text-gray-300;
+    @apply mb-0 text-dark dark:text-gray-300;
   }
 </style>

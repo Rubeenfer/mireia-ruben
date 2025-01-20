@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import endImage from "../images/end2.jpg";
+import { translations } from "../i18n/translations";
+import { Man, Woman } from "../icons";
+
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
+const t = translations[lang];
+---
+
+<section id="schedule" class="section">
+  <div class="section-container">
+    <h2 class="heading-2">¿Cómo?</h2>
+    <div class="flex flex-row items-center justify-center gap-20">
+      <div class="card">
+        <Man />
+        <ul class="flex max-w-96 list-disc flex-col gap-5 px-4 text-left">
+          <li>Traje clásico</li>
+          <li>Acompañado de corbata o pajarita</li>
+          <li>Camisa que haga juego.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <Woman />
+        <ul class="flex max-w-96 list-disc flex-col gap-5 px-4 text-left">
+          <li>Vestidos largos o trajes de pantalón elegantes</li>
+          <li>
+            En cuanto a los zapatos tened en cuenta que la Farinera de Sant
+            Lluís está rodeada de naturaleza y hay césped por todo el recinto.
+          </li>
+          <li>¡Tacones gruesos o bajos serán vuestros mejores aliados!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section-container2">
+    <Image src={endImage} alt="Descripción de la imagen" />
+  </div>
+</section>
+
+<style>
+  .card {
+    @apply flex h-96 w-1/3 flex-col items-center justify-start gap-16 rounded-md border-2 border-dark p-6 shadow-md;
+    @apply dark:border-cream;
+  }
+  .section {
+    @apply bg-day2_0_0 flex flex-col items-center justify-center bg-repeat;
+    @apply dark:bg-night2_0_0;
+  }
+  .section-container {
+    @apply container flex min-w-[100dvw] flex-col gap-20 p-20;
+    @apply bg-cover bg-no-repeat;
+  }
+  .section-container2 {
+    @apply container -mb-32 flex max-w-lg flex-col gap-20 rounded-md;
+    @apply dark:bg-night_0_0 bg-cover bg-no-repeat;
+  }
+</style>

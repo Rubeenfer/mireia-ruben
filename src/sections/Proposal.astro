@@ -1,32 +1,21 @@
----
-
----
-
-<section id="proposal" class="bg-gray-100 py-16 dark:bg-gray-800">
-  <div class="container mx-auto px-4">
-    <h2 class="heading-2">The Proposal</h2>
-    <div
-      class="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-lg dark:bg-gray-700"
-    >
-      <p class="mb-6 text-gray-700 dark:text-gray-300">
-        On a crisp autumn evening, Rubén surprised Mireia with a romantic picnic
-        in Park Güell. As the sun set over Barcelona, painting the sky in
-        vibrant hues, Rubén got down on one knee and asked Mireia to spend the
-        rest of their lives together. With tears of joy, Mireia said yes, and
-        they celebrated their engagement surrounded by the magical architecture
-        of Gaudí.
-      </p>
-      <div class="aspect-w-16 aspect-h-9">
-        <iframe
-          class="h-full w-full"
-          src="https://www.youtube.com/embed/your-proposal-video-id"
-          title="Mireia and Rubén's Proposal"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
-    </div>
+<section id="proposal" class="section">
+  <div class="section-container">
+    <video class="aspect-video h-64 rounded-md" autoplay loop>
+      <source
+        src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4"
+        type="video/mp4"
+      />
+    </video>
   </div>
 </section>
+
+<style>
+  .section {
+    @apply bg-day_100_0 flex flex-col items-center justify-center pt-16;
+    @apply dark:bg-night_0_0;
+  }
+  .section-container {
+    @apply container -mb-32 flex max-w-lg flex-col gap-20 rounded-md;
+    @apply bg-cover bg-no-repeat;
+  }
+</style>

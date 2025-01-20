@@ -54,8 +54,6 @@
     const darkMode = localStorage.getItem("darkMode") === "true";
     if (darkMode) document.documentElement.classList.add("dark");
     const themeSwitch = document.getElementById("switch");
-
-    console.log(themeSwitch);
     if (themeSwitch) themeSwitch.addEventListener("click", switchTheme);
   });
 </script>

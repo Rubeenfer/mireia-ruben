@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 interface CountdownProps {
-  targetDate: Date;
   translations: {
     days: string;
     hours: string;
     minutes: string;
     seconds: string;
   };
+  styles: string;
 }
 
-const CountdownTimer: React.FC<CountdownProps> = ({
-  targetDate,
-  translations,
-}) => {
+const CountdownTimer: React.FC<CountdownProps> = ({ translations, styles }) => {
+  const targetDate = new Date("2025-04-05T13:00:00");
   const calculateTimeLeft = () => {
     const difference = +targetDate - +new Date();
     let timeLeft = {};
@@ -35,11 +33,8 @@ const CountdownTimer: React.FC<CountdownProps> = ({
     return () => clearTimeout(timer);
   });
 
-  const removeFinalS = (value: number, interval: string) =>
-    value === 1 ? interval.slice(0, -1) : interval;
-
   return (
-    <div className="text-cream flex justify-center space-x-4">
+    <div className={`flex justify-center space-x-4 ${styles}`}>
       {Object.keys(timeLeft).length === 0 ? (
         <span className="text-2xl font-light">The wedding has started!</span>
       ) : (

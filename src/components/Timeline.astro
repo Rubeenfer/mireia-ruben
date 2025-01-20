@@ -49,29 +49,28 @@ const t = translations[lang];
 
 <style>
   .card {
-    @apply mx-auto max-w-[300px] rounded-lg bg-white p-6 text-center shadow-lg;
-    @apply sm:max-w-xl sm:p-6 md:max-w-2xl;
-    @apply dark:bg-gray-700;
-
-    @apply relative mx-auto max-w-sm p-6;
+    @apply bg-olive rounded-lg p-6 text-center shadow-lg;
+    @apply dark:bg-sky;
+    @apply relative flex items-center justify-center p-6;
+    @apply aspect-square w-3/5 rounded-md shadow-md;
   }
   .line {
-    @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-black;
-    @apply dark:bg-white;
+    @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-dark;
+    @apply dark:bg-cream;
   }
   .list {
     @apply space-y-6;
   }
   .list-element {
-    @apply flex w-64 items-center justify-around;
+    @apply mx-auto flex w-64 items-center justify-around;
   }
   .time {
     @apply w-1/3 text-left text-dark;
     @apply dark:text-cream;
   }
   .icon-container {
-    @apply z-10 flex w-1/3 items-center justify-center bg-white p-1;
-    @apply dark:bg-gray-700;
+    @apply bg-olive z-10 flex w-1/3 items-center justify-center p-1;
+    @apply dark:bg-sky;
   }
   .event {
     @apply w-1/3 text-right text-dark;

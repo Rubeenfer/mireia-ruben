@@ -2,9 +2,7 @@ export const translations = {
   es: {
     nav: {
       ourStory: "Nuestra Historia",
-      location: "¿Dónde?",
-      schedule: "Cúando?",
-      how: "Cómo?",
+      theDay: "El gran día",
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",
@@ -60,7 +58,7 @@ export const translations = {
       imageAlt: "Imagen de boda {index}",
     },
     location: {
-      title: "¿Dónde?",
+      title: "¿Dónde será?",
       address1: "Carrer de Sant Lluís",
       address2: "17600 Figueres, Girona",
       place: "La Farinera de Sant Lluís",
@@ -76,9 +74,7 @@ export const translations = {
   ca: {
     nav: {
       ourStory: "Nuestra Historia",
-      location: "¿Dónde?",
-      schedule: "Cúando?",
-      how: "Cómo?",
+      theDay: "El gran día",
     },
     hero: {
       date: "5 d'Abril, 2025 a les 13:00",
@@ -132,7 +128,7 @@ export const translations = {
       imageAlt: "Imatge de casament {index}",
     },
     location: {
-      title: "Ubicación",
+      title: "¿Dónde será?",
       address1: "Carrer de Sant Lluís",
       address2: "17600 Figueres, Girona",
       place: "La Farinera de Sant Lluís",
@@ -148,9 +144,7 @@ export const translations = {
   en: {
     nav: {
       ourStory: "Nuestra Historia",
-      location: "¿Dónde?",
-      schedule: "Cúando?",
-      how: "Cómo?",
+      theDay: "El gran día",
     },
     hero: {
       date: "April 5, 2025 at 1:00 PM",
@@ -204,7 +198,7 @@ export const translations = {
       imageAlt: "Wedding image {index}",
     },
     location: {
-      title: "Ubicación",
+      title: "¿Dónde será?",
       place: "La Farinera de Sant Lluís",
       address1: "Carrer de Sant Lluís",
       address2: "17600 Figueres, Girona",

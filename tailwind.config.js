@@ -22,10 +22,20 @@ const night_0_100 = `radial-gradient(circle at 0% 100%,  ${dark} 5vw, ${sky} 50v
 const night_100_0 = `radial-gradient(circle at 100% 0%,  ${dark} 5vw, ${sky} 50vw, ${sky} 100vw)`;
 const night_100_100 = `radial-gradient(circle at 100% 100%,  ${dark} 5vw, ${sky} 50vw, ${sky} 100vw)`;
 
+const night2_0_0 = `radial-gradient(circle at 0% 0%,  ${sky} 5vw, ${dark} 50vw, ${dark} 100vw)`;
+const night2_0_100 = `radial-gradient(circle at 0% 100%,  ${sky} 5vw, ${dark} 50vw, ${dark} 100vw)`;
+const night2_100_0 = `radial-gradient(circle at 100% 0%,  ${sky} 5vw, ${dark} 50vw, ${dark} 100vw)`;
+const night2_100_100 = `radial-gradient(circle at 100% 100%,  ${sky} 5vw, ${dark} 50vw, ${dark} 100vw)`;
+
 const day_0_0 = `radial-gradient(circle at 0% 0%,  ${leaf} 5vw, ${olive} 50vw, ${olive} 100vw)`;
 const day_0_100 = `radial-gradient(circle at 0% 100%,  ${leaf} 5vw, ${olive} 50vw, ${olive} 100vw)`;
 const day_100_0 = `radial-gradient(circle at 100% 0%,  ${leaf} 5vw, ${olive} 50vw, ${olive} 100vw)`;
 const day_100_100 = `radial-gradient(circle at 100% 100%,  ${leaf} 5vw, ${olive} 50vw, ${olive} 100vw)`;
+
+const day2_0_0 = `radial-gradient(circle at 0% 0%,  ${olive} 5vw, ${leaf} 50vw, ${leaf} 100vw)`;
+const day2_0_100 = `radial-gradient(circle at 0% 100%,  ${olive} 5vw, ${leaf} 50vw, ${leaf} 100vw)`;
+const day2_100_0 = `radial-gradient(circle at 100% 0%,  ${olive} 5vw, ${leaf} 50vw, ${leaf} 100vw)`;
+const day2_100_100 = `radial-gradient(circle at 100% 100%,  ${olive} 5vw, ${leaf} 50vw, ${leaf} 100vw)`;
 
 // LINEAR-COLORS:
 const oliveOverlay = `linear-gradient(0deg, ${transparent} 0%, ${olive} 50%)`;
@@ -35,8 +45,8 @@ const nightOverlay = `linear-gradient(0deg, ${transparent} 0%, ${sky} 50%)`;
 const nightOverlayReverse = `linear-gradient(0deg, ${sky} 50%, ${transparent} 100%)`;
 
 // BACKGROUND-IMAGES:
-const hero = `linear-gradient(0deg, ${transparent}, ${leaf}CC), url(${farineraDay})`;
-const darkHero = `linear-gradient(0deg, ${transparent}, ${dark}CC), url(${farineraNight})`;
+const hero = `linear-gradient(0deg, ${transparent}, ${leaf}4d), url(${farineraDay})`;
+const darkHero = `linear-gradient(0deg, ${transparent}, ${dark}4d), url(${farineraNight})`;
 
 const ourStoryMobile = `linear-gradient(0deg, ${olive}CC, ${olive}CC), url(${ourStoryDay})`;
 const ourStory = `linear-gradient(95deg, ${olive} 10%, ${transparent} 20%, ${transparent} 80%, ${olive} 90%),  url(${ourStoryDay})`;
@@ -71,11 +81,19 @@ module.exports = {
         day_0_100,
         day_100_0,
         day_100_100,
+        day2_0_0,
+        day2_0_100,
+        day2_100_0,
+        day2_100_100,
         hero,
         night_0_0,
         night_0_100,
         night_100_0,
         night_100_100,
+        night2_0_0,
+        night2_0_100,
+        night2_100_0,
+        night2_100_100,
         nightOverlay,
         nightOverlayReverse,
         oliveOverlay,
