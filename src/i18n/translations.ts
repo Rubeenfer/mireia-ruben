@@ -64,7 +64,7 @@ export const translations = {
       place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "¿Cúando?",
+      title: "¿Cúando sucederá?",
       ceremony: "Ceremonia",
       appetizer: "Aperitivo",
       lunch: "Comida",
@@ -134,7 +134,7 @@ export const translations = {
       place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "Horario",
+      title: "¿Cúando sucederá?",
       ceremony: "Cerimònia",
       appetizer: "Aperitiu",
       lunch: "Dinar",
@@ -204,7 +204,7 @@ export const translations = {
       address2: "17600 Figueres, Girona",
     },
     schedule: {
-      title: "Horario",
+      title: "¿Cúando sucederá?",
       ceremony: "Ceremony",
       appetizer: "Appetizer",
       lunch: "Lunch",
