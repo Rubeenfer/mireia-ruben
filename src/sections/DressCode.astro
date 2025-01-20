@@ -33,12 +33,14 @@ const t = translations[lang];
       </div>
     </div>
   </div>
-  <div class="section-container2">
-    <Image src={endImage} alt="Descripción de la imagen" />
-  </div>
+  <Image class="video" src={endImage} alt="Descripción de la imagen" />
 </section>
 
 <style>
+  .video {
+    @apply container z-40 -mb-48 flex h-96 max-w-lg rounded-md border-2 border-dark bg-dark object-cover;
+    @apply dark:border-cream;
+  }
   .card {
     @apply flex h-96 w-1/3 flex-col items-center justify-start gap-16 rounded-md border-2 border-dark p-6 shadow-md;
     @apply dark:border-cream;

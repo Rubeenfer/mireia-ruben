@@ -6,7 +6,7 @@ const t = translations[lang];
 ---
 
 <section id="rsvp" class="section">
-  <div class="section-container mt-32">
+  <div class="section-container mt-64">
     <h2 class="heading-2">
       {t.rsvp.title}
     </h2>
@@ -26,25 +26,18 @@ const t = translations[lang];
 
 <style>
   .section {
-    @apply bg-day2_0_100 flex items-start justify-center;
-    @apply dark:bg-night2_0_100;
+    @apply bg-day2_100_0 flex items-start justify-center border-t-2 border-dark;
+    @apply dark:bg-night2_0_100 dark:border-cream border-t-2 border-dark;
   }
 
   .section-container {
-    @apply container -mb-32 flex min-w-[100dvw] max-w-lg flex-col gap-32 rounded-md py-20;
-    @apply dark:bg-night_0_0 bg-cover bg-no-repeat;
+    @apply container flex min-w-[100dvw] max-w-lg flex-col gap-32 rounded-md py-20;
+    @apply bg-cover bg-no-repeat;
   }
 
   .form {
     @apply m-auto w-[90dvw] rounded-lg shadow-lg;
     @apply sm:w-9/12 xl:w-1/2;
-  }
-
-  [class^="sticky-header-container__Wrapper-sc"] {
-    display: none !important;
-  }
-  .jbtsqZ {
-    display: none !important;
   }
 </style>
 

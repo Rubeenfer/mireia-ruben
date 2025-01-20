@@ -1,12 +1,10 @@
 <section id="proposal" class="section">
-  <div class="section-container h-96 border-2 border-dark">
-    <video class="aspect-video h-96 rounded-md" autoplay loop>
-      <source
-        src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4"
-        type="video/mp4"
-      />
-    </video>
-  </div>
+  <video class="video" autoplay loop>
+    <source
+      src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4"
+      type="video/mp4"
+    />
+  </video>
 </section>
 
 <style>
@@ -14,8 +12,8 @@
     @apply bg-day_100_0 flex flex-col items-center justify-center pt-16;
     @apply dark:bg-night_0_0;
   }
-  .section-container {
-    @apply container -mb-48 flex max-w-lg flex-col gap-20 rounded-md;
-    @apply bg-cover bg-no-repeat;
+  .video {
+    @apply container z-40 -mb-48 flex h-96 max-w-lg rounded-md border-2 border-dark bg-dark object-cover;
+    @apply dark:border-cream dark:bg-cream;
   }
 </style>

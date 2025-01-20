@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 import { collaborators } from "../constants/collaborators.ts";
 ---
 
-<section id="collaborators" class="text-cream bg-gray-900 py-16">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+<section id="collaborators" class="section">
+  <div class="section-container m-48">
+    <h3 class="heading-3">¿Quién ha hecho esto possible?</h3>
+    <div class="section-content">
       {
         collaborators.map((collaborator) => (
           <div class="flex items-start rounded-lg bg-gray-800 p-6 shadow-lg">
@@ -34,3 +35,19 @@ import { collaborators } from "../constants/collaborators.ts";
     </div>
   </div>
 </section>
+
+<style>
+  .section {
+    @apply bg-day2_100_0 flex items-start justify-center border-t-2 border-dark;
+    @apply dark:bg-night2_0_100 dark:border-cream border-t-2 border-dark;
+  }
+
+  .section-container {
+    @apply container flex min-w-[100dvw] max-w-lg flex-col gap-32 rounded-md py-20;
+    @apply bg-cover bg-no-repeat;
+  }
+  .section-content {
+    @apply flex flex-wrap items-center justify-center gap-10;
+    @aply;
+  }
+</style>
