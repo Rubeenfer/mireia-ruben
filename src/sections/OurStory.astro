@@ -1,5 +1,6 @@
 ---
 import { translations } from "../i18n/translations";
+import Rings from "../icons/Rings.astro";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
@@ -8,16 +9,24 @@ const t = translations[lang];
 <section id="ourStory" class="section">
   <div class="overlay top-overlay"></div>
   <div class="section-container">
-    <h2 class="heading-2 section-content">
-      {t.ourStory.title}
-    </h2>
-    <div class="section-content">
-      <p class="paragraph">
-        {t.ourStory.paragraph1}
-      </p>
-      <p class="paragraph">
-        {t.ourStory.paragraph2}
-      </p>
+    <div class="w-1/3"></div>
+    <div
+      class="flex w-1/3 flex-col items-center justify-center gap-10 bg-leaf p-10 dark:bg-sky"
+    >
+      <h2 class="heading-2 section-content">
+        {t.ourStory.title}
+      </h2>
+      <div class="section-content">
+        <p class="paragraph">
+          {t.ourStory.paragraph1}
+        </p>
+        <p class="paragraph">
+          {t.ourStory.paragraph2}
+        </p>
+      </div>
+    </div>
+    <div class="flex w-1/3 items-center justify-center bg-leaf dark:bg-sky">
+      <Rings />
     </div>
   </div>
   <div class="overlay bottom-overlay"></div>
@@ -26,7 +35,7 @@ const t = translations[lang];
 <style>
   .section {
     @apply flex flex-col items-center justify-center bg-day_100_100;
-    @apply border-t-[1px] border-dark dark:border-cream dark:bg-night_0_100;
+    @apply dark:bg-night_0_100;
   }
   .overlay {
     @apply z-20 flex min-h-16 min-w-[50dvw];
@@ -45,11 +54,12 @@ const t = translations[lang];
     @apply bg-ourStoryMobile bg-cover bg-fixed bg-center bg-no-repeat transition-all duration-300;
     @apply md:bg-ourStory md:bg-[length:40%] md:bg-local md:bg-[2%_center] lg:bg-[length:30%] xl:bg-[length:25%];
     @apply dark:bg-darkOurStoryMobile dark:md:bg-darkOurStory dark:md:bg-[98%_center];
+    @apply flex-row gap-0 bg-olive dark:flex-row-reverse dark:bg-dark;
   }
 
   .section-content {
     @apply max-w-3xl text-pretty rounded-lg px-6 text-center;
-    @apply sm:px-8 md:ml-auto md:mr-5 md:w-3/5 dark:md:ml-5 lg:mx-auto lg:w-2/5;
+    @apply sm:px-8 md:mr-5 dark:md:ml-5;
     @apply dark:lg:mx-auto;
   }
 

@@ -98,20 +98,19 @@ import {
     @apply mr-4 rounded-full p-3;
   }
   .section {
-    @apply flex items-start justify-center border-t-[1px] border-dark bg-day2_0_0;
-    @apply dark:bg-night2_0_0;
+    @apply flex items-start justify-center bg-olive dark:bg-dark;
   }
 
   .section-container {
-    @apply container mt-48 flex flex-col gap-10 rounded-md py-20;
+    @apply container mt-32 flex flex-col gap-10 rounded-md py-20;
     @apply bg-cover bg-no-repeat;
   }
   .section-content {
     @apply flex flex-wrap items-center justify-center gap-6;
   }
   .item {
-    @apply flex w-72 items-start rounded-md border-[1px] border-dark p-4 shadow-lg;
-    @apply transition-all duration-500 hover:bg-olive dark:border-cream lg:w-1/3 xl:w-1/4;
+    @apply flex w-72 items-start rounded-md border-[1px] border-dark p-4 shadow-lg dark:border-cream;
+    @apply transition-all duration-500 hover:bg-leaf lg:w-1/3 xl:w-1/4;
     @apply text-dark dark:text-cream dark:hover:bg-sky;
   }
 </style>

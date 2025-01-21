@@ -3,7 +3,7 @@
 // COLORS:
 const dark = "#101827";
 const leaf = "#86895d";
-const sky = "#615f81";
+const sky = "#1c394f";
 const olive = "#dcdac3";
 const cream = "#FFFFFF";
 const transparent = "#00000000";
@@ -41,8 +41,8 @@ const day2_100_100 = `radial-gradient(circle at 100% 100%,  ${olive} 5vw, ${leaf
 const oliveOverlay = `linear-gradient(0deg, ${transparent} 0%, ${olive} 50%)`;
 const oliveOverlayReverse = `linear-gradient(0deg, ${olive} 50%, ${transparent} 100%)`;
 
-const nightOverlay = `linear-gradient(0deg, ${transparent} 0%, ${sky} 50%)`;
-const nightOverlayReverse = `linear-gradient(0deg, ${sky} 50%, ${transparent} 100%)`;
+const nightOverlay = `linear-gradient(0deg, ${transparent} 0%, ${dark} 50%)`;
+const nightOverlayReverse = `linear-gradient(0deg, ${dark} 50%, ${transparent} 100%)`;
 
 // BACKGROUND-IMAGES:
 const hero = `linear-gradient(0deg, ${transparent}, ${leaf}4d), url(${farineraDay})`;
@@ -50,8 +50,8 @@ const darkHero = `linear-gradient(0deg, ${transparent}, ${dark}4d), url(${farine
 
 const ourStoryMobile = `linear-gradient(0deg, ${olive}CC, ${olive}CC), url(${ourStoryDay})`;
 const ourStory = `linear-gradient(95deg, ${olive} 10%, ${transparent} 20%, ${transparent} 80%, ${olive} 90%),  url(${ourStoryDay})`;
-const darkOurStoryMobile = `linear-gradient(0deg, ${sky}CC, ${sky}CC), url(${ourStoryNight})`;
-const darkOurStory = `linear-gradient(85deg, ${sky} 10%, ${transparent} 20%, ${transparent} 80%, ${sky} 90%), url(${ourStoryNight})`;
+const darkOurStoryMobile = `linear-gradient(0deg, ${dark}CC, ${dark}CC), url(${ourStoryNight})`;
+const darkOurStory = `linear-gradient(85deg, ${dark} 10%, ${transparent} 20%, ${transparent} 80%, ${dark} 90%), url(${ourStoryNight})`;
 
 const schedule = `linear-gradient(0deg, ${transparent}, ${leaf}CC), url(${dock})`;
 const darkSchedule = `linear-gradient(0deg,  ${transparent}, ${dark}CC), url(${dock})`;

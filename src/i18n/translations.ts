@@ -3,7 +3,7 @@ export const translations = {
   es: {
     nav: {
       ourStory: {
-        text: "Nuestra Historia",
+        text: "¿Cómo y por qué?",
         link: `${url}/#ourStory/`,
       },
       whereAndWhen: {
@@ -11,7 +11,7 @@ export const translations = {
         link: `${url}/#whenAndWhere/`,
       },
       register: {
-        text: "Confirma tu asistencia",
+        text: "¿Te apuntas? ",
         link: `${url}/rsvp/#register/`,
       },
     },
@@ -85,15 +85,15 @@ export const translations = {
   ca: {
     nav: {
       ourStory: {
-        text: "Nuestra Historia",
+        text: "Com y per què?",
         link: `${url}/ca/#ourStory/`,
       },
       whereAndWhen: {
-        text: "¿Dónde y cúando?",
+        text: "On i quan?",
         link: `${url}/ca/#whenAndWhere/`,
       },
       register: {
-        text: "Confirma tu asistencia",
+        text: "T'apuntes?",
         link: `${url}/ca/rsvp/#register/`,
       },
     },
@@ -165,15 +165,15 @@ export const translations = {
   en: {
     nav: {
       ourStory: {
-        text: "Nuestra Historia",
+        text: "How and why?",
         link: `${url}/en/#ourStory/`,
       },
       whereAndWhen: {
-        text: "¿Dónde y cúando?",
+        text: "Where and when?",
         link: `${url}/en/#whenAndWhere/`,
       },
       register: {
-        text: "Confirma tu asistencia",
+        text: "Are you in?",
         link: `${url}/en/rsvp/#register/`,
       },
     },

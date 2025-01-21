@@ -49,16 +49,15 @@ const t = translations[lang];
 
 <style>
   .card {
-    @apply relative flex items-center justify-center bg-olive p-6 text-center shadow-lg;
+    @apply relative flex items-center justify-center text-center;
     @apply rounded-md md:aspect-square md:w-80;
-    @apply border-[1px] border-dark dark:border-cream dark:bg-sky;
   }
   .line {
-    @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-dark;
+    @apply absolute bottom-8 left-1/2 top-16 w-[1px] bg-dark;
     @apply dark:bg-cream;
   }
   .list {
-    @apply space-y-6;
+    @apply space-y-10;
   }
   .list-element {
     @apply mx-auto flex w-64 items-center justify-around;
@@ -68,8 +67,7 @@ const t = translations[lang];
     @apply dark:text-cream;
   }
   .icon-container {
-    @apply z-10 flex w-1/3 items-center justify-center bg-olive p-1;
-    @apply dark:bg-sky;
+    @apply z-10 flex w-1/3 items-center justify-center bg-olive p-1 dark:bg-dark;
   }
   .event {
     @apply w-1/3 text-right text-dark;
