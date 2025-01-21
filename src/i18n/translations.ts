@@ -1,8 +1,19 @@
+const url = "http://localhost:4321";
 export const translations = {
   es: {
     nav: {
-      ourStory: "Nuestra Historia",
-      theDay: "El gran día",
+      ourStory: {
+        text: "Nuestra Historia",
+        link: `${url}/#ourStory/`,
+      },
+      whereAndWhen: {
+        text: "¿Dónde y cúando?",
+        link: `${url}/#whenAndWhere/`,
+      },
+      register: {
+        text: "Confirma tu asistencia",
+        link: `${url}/rsvp/#register/`,
+      },
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",
@@ -73,8 +84,18 @@ export const translations = {
   },
   ca: {
     nav: {
-      ourStory: "Nuestra Historia",
-      theDay: "El gran día",
+      ourStory: {
+        text: "Nuestra Historia",
+        link: `${url}/ca/#ourStory/`,
+      },
+      whereAndWhen: {
+        text: "¿Dónde y cúando?",
+        link: `${url}/ca/#whenAndWhere/`,
+      },
+      register: {
+        text: "Confirma tu asistencia",
+        link: `${url}/ca/rsvp/#register/`,
+      },
     },
     hero: {
       date: "5 d'Abril, 2025 a les 13:00",
@@ -143,8 +164,18 @@ export const translations = {
   },
   en: {
     nav: {
-      ourStory: "Nuestra Historia",
-      theDay: "El gran día",
+      ourStory: {
+        text: "Nuestra Historia",
+        link: `${url}/en/#ourStory/`,
+      },
+      whereAndWhen: {
+        text: "¿Dónde y cúando?",
+        link: `${url}/en/#whenAndWhere/`,
+      },
+      register: {
+        text: "Confirma tu asistencia",
+        link: `${url}/en/rsvp/#register/`,
+      },
     },
     hero: {
       date: "April 5, 2025 at 1:00 PM",

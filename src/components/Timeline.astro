@@ -49,9 +49,9 @@ const t = translations[lang];
 
 <style>
   .card {
-    @apply bg-olive relative flex items-center justify-center p-6 text-center shadow-lg;
+    @apply relative flex items-center justify-center bg-olive p-6 text-center shadow-lg;
     @apply rounded-md md:aspect-square md:w-80;
-    @apply dark:bg-sky;
+    @apply border-[1px] border-dark dark:border-cream dark:bg-sky;
   }
   .line {
     @apply absolute bottom-8 left-1/2 top-8 w-[1px] bg-dark;
@@ -68,7 +68,7 @@ const t = translations[lang];
     @apply dark:text-cream;
   }
   .icon-container {
-    @apply bg-olive z-10 flex w-1/3 items-center justify-center p-1;
+    @apply z-10 flex w-1/3 items-center justify-center bg-olive p-1;
     @apply dark:bg-sky;
   }
   .event {

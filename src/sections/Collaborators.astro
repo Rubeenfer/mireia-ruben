@@ -15,7 +15,7 @@ import {
 
 <section id="collaborators" class="section">
   <div class="section-container">
-    <h3 class="heading-3">¿Quién ha hecho esto possible?</h3>
+    <h3 class="heading-2">Colaboradores</h3>
     <div class="section-content">
       <a href={`https://${collaborators[0].link}`} class="item" target="_blank">
         <div class="icon">
@@ -98,12 +98,12 @@ import {
     @apply mr-4 rounded-full p-3;
   }
   .section {
-    @apply bg-day2_0_0 flex items-start justify-center;
+    @apply flex items-start justify-center bg-day2_0_0;
     @apply dark:bg-night2_0_0;
   }
 
   .section-container {
-    @apply container flex flex-col gap-32 rounded-md py-20;
+    @apply container flex flex-col gap-10 rounded-md py-20;
     @apply bg-cover bg-no-repeat;
   }
   .section-content {
@@ -111,7 +111,7 @@ import {
   }
   .item {
     @apply flex w-72 items-start rounded-md border-[1px] border-dark p-4 shadow-lg;
-    @apply hover:bg-cream dark:border-cream transition-all duration-500 lg:w-1/3 xl:w-1/4;
-    @apply dark:text-cream text-dark dark:hover:text-dark;
+    @apply transition-all duration-500 hover:bg-olive dark:border-cream lg:w-1/3 xl:w-1/4;
+    @apply text-dark dark:text-cream dark:hover:bg-sky;
   }
 </style>

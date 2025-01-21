@@ -25,15 +25,14 @@ const t = translations[lang];
 <style>
   .section {
     @apply relative flex min-h-dvh flex-col items-center justify-end bg-hero bg-cover bg-top;
-    @apply dark:bg-darkHero bg-fixed dark:bg-bottom;
+    @apply bg-fixed dark:bg-darkHero dark:bg-bottom;
   }
   .background-blur {
     @apply absolute inset-0 z-0 bg-dark opacity-20;
   }
 
   .box {
-    @apply bg-leaf text-cream z-10 w-full rounded-lg bg-opacity-20 p-8 text-center backdrop-blur-sm sm:mb-16 sm:w-auto;
-    @appy dark:bg-opacity-50 dark:bg-dark;
+    @apply z-10 w-full rounded-lg bg-dark bg-opacity-30 p-8 text-center text-cream backdrop-blur-sm sm:mb-16 sm:w-auto;
   }
   .date {
     @apply mb-2 text-sm font-light sm:text-base;

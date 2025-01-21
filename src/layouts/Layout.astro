@@ -94,16 +94,16 @@ const t = translations[lang];
 
   .heading-1 {
     font-family: "Brittany Signature", sans-serif, system-ui;
-    @apply text-cream z-10 m-auto text-5xl sm:text-7xl md:text-8xl lg:text-9xl;
+    @apply z-10 m-auto text-5xl text-cream sm:text-7xl md:text-8xl lg:text-9xl;
   }
   .heading-2 {
     font-family: "Kalam", sans-serif, system-ui;
-    @apply dark:text-cream m-0 text-center text-3xl text-dark;
+    @apply m-0 text-center text-3xl text-dark dark:text-cream;
     @apply sm:text-4xl md:text-5xl;
   }
   .heading-3 {
     font-family: "Kalam", sans-serif, system-ui;
-    @apply dark:text-cream m-0 text-center text-2xl text-dark;
+    @apply m-0 text-center text-2xl text-dark dark:text-cream;
     @apply sm:text-3xl md:text-4xl;
   }
 
@@ -116,10 +116,5 @@ const t = translations[lang];
 
   * {
     font-family: "Kalam", sans-serif, system-ui;
-  }
-  .item:hover > .icon > svg,
-  .item:hover > .icon svg path,
-  .item:hover > .icon svg circle {
-    @apply fill-dark stroke-dark dark:fill-dark dark:stroke-dark;
   }
 </style>

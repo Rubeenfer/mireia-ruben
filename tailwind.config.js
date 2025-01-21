@@ -2,10 +2,10 @@
 
 // COLORS:
 const dark = "#101827";
-const leaf = "#7D9885";
-const sky = "#1c394f";
-const olive = "#d0d4c2";
-const cream = "#f9f5f0";
+const leaf = "#86895d";
+const sky = "#615f81";
+const olive = "#dcdac3";
+const cream = "#FFFFFF";
 const transparent = "#00000000";
 
 // IMAGES:

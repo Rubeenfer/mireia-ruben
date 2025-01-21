@@ -12,11 +12,11 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 
 <style>
   .select-container {
-    @apply bg-leaf dark:bg-sky rounded-md px-2 py-1;
+    @apply rounded-md bg-leaf px-2 py-1 dark:bg-sky;
   }
   .select {
-    @apply bg-leaf text-cream w-12 text-sm;
-    @apply focus:ring-leaf focus:outline-none;
+    @apply w-12 bg-leaf text-sm text-cream;
+    @apply focus:outline-none focus:ring-leaf;
     @apply dark:bg-sky dark:focus:ring-sky;
   }
 </style>
@@ -24,7 +24,14 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 <script>
   const languageSelect = document.getElementById("select") as HTMLSelectElement;
   languageSelect.addEventListener("change", (event) => {
-    const newLang = (event.target as HTMLSelectElement).value;
-    window.location.href = newLang === "es" ? "/" : `/${newLang}`;
+    const { origin, hash, pathname } = window.location;
+    const language = (event.target as HTMLSelectElement).value;
+
+    console.log("Pathname: ", pathname.split("/")[2]);
+    const path = pathname.split("/")[2];
+    if (language === "es")
+      window.location.href = `${origin}${path ? `/${path}` : ""}/${hash}`;
+
+    window.location.href = `${origin}${path ? `/${path}` : ""}/${hash}`;
   });
 </script>

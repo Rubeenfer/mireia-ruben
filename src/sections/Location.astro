@@ -10,10 +10,10 @@ const MAP_PARAMETERS = "q=La+Farinera+Sant+Llu%C3%ADs&maptype=roadmap&zoom=15";
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
 
-<section id="location" class="section">
+<section id="whenAndWhere" class="section">
   <div class="section-container mt-48">
     <div class="card">
-      <h3 class="heading-3">¿Dónde se celebrará?</h3>
+      <h3 class="heading-3">¿Dónde?</h3>
       <div class="mx-4 flex flex-col items-center justify-center gap-4">
         <p class="paragraph">
           Nos veremos en la antigua farinera de Sant Lluís un lugar encantador
@@ -21,7 +21,7 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
         </p>
         <p class="paragraph">Carrer de Sant Lluís, 17600 Figueres, Girona</p>
         <iframe
-          class="rounded-md md:aspect-square md:w-80"
+          class="rounded-md border-[1px] border-dark shadow-lg dark:border-cream md:aspect-square md:w-80"
           referrerpolicy="no-referrer-when-downgrade"
           src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
           allowfullscreen
@@ -30,9 +30,7 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
       </div>
     </div>
     <div class="card">
-      <h2 class="heading-3">
-        {t.schedule.title}
-      </h2>
+      <h2 class="heading-3">¿Cúando?</h2>
       <div class="mx-4 flex flex-col items-center justify-center gap-4">
         <p class="paragraph">
           La ceremonia dará comienzo a las 13:00h el día 5 de Abril de 2025
@@ -46,8 +44,8 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 
 <style>
   .section {
-    @apply bg-day2_0_100 flex min-w-[100dvw] items-start justify-center;
-    @apply dark:bg-night2_0_100 dark:border-cream border-t-[1px] border-dark;
+    @apply flex min-w-[100dvw] items-start justify-center bg-day2_0_100;
+    @apply border-t-[1px] border-dark dark:border-cream dark:bg-night2_0_100;
   }
   .section-container {
     @apply container flex flex-col gap-16 py-20 md:flex-row;

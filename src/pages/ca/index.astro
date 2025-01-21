@@ -1,26 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
-import Hero from "../../sections/Hero.astro";
-import OurStory from "../../sections/OurStory.astro";
-import RSVP from "../../sections/RSVP.astro";
-import Location from "../../sections/Location.astro";
-import PhotoGallery from "../../sections/PhotoGallery.astro";
-import Proposal from "../../sections/Proposal.astro";
-import Footer from "../../components/Footer.astro";
-
-const lang = "ca";
+import Page from "../index.astro";
 ---
 
-<Layout title="Casament de Mireia i Rubén" lang={lang}>
-  <Header lang={lang} />
-  <main>
-    <Hero lang={lang} />
-    <OurStory lang={lang} />
-    <RSVP lang={lang} />
-    <Location lang={lang} />
-    <PhotoGallery lang={lang} />
-    <Proposal lang={lang} />
-  </main>
-  <Footer lang={lang} />
-</Layout>
+<Page lang="ca" />
