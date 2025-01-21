@@ -8,6 +8,7 @@ import Location from "../sections/Location.astro";
 import Proposal from "../sections/Proposal.astro";
 import Footer from "../components/Footer.astro";
 import Collaborators from "../sections/Collaborators.astro";
+import Divider from "../sections/Divider.astro";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 ---
@@ -20,8 +21,8 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
       <OurStory lang={lang} />
       <Proposal lang={lang} />
       <Location lang={lang} />
+      <Divider lang={lang} />
       <Collaborators lang={lang} />
-      <Register lang={lang} />
       <Footer lang={lang} />
     </main>
   </div>

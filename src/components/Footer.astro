@@ -2,9 +2,16 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="text-cream bg-gray-900 py-8">
+<footer class="footer">
   <div class="container mx-auto px-4 text-center">
     <p class="mb-2">&copy; {currentYear} Mireia & Rubén's Wedding</p>
     <p>Designed with love for our special day</p>
   </div>
 </footer>
+
+<style>
+  .footer {
+    @apply z-50 max-w-[100dvw] border-[1px] border-t-dark bg-olive bg-opacity-95 py-8 shadow-md transition-colors duration-300;
+    @apply border-b-[1px] border-dark dark:border-cream dark:bg-dark dark:bg-opacity-95;
+  }
+</style>
