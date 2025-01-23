@@ -3,7 +3,7 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 ---
 
 <div class="select-container">
-  <select id="select" class="select">
+  <select id="select" class="select text-kalam">
     <option value="es" selected={lang === "es"}>ES</option>
     <option value="ca" selected={lang === "ca"}>CA</option>
     <option value="en" selected={lang === "en"}>EN</option>
@@ -12,12 +12,11 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 
 <style>
   .select-container {
-    @apply rounded-md bg-leaf px-2 py-1 dark:bg-sky;
+    @apply rounded-md border-[1px] border-dark px-2 py-0.5 dark:border-cream;
   }
   .select {
-    @apply w-12 bg-leaf text-sm text-cream;
-    @apply focus:outline-none focus:ring-leaf;
-    @apply dark:bg-sky dark:focus:ring-sky;
+    @apply w-12 bg-transparent text-sm text-dark;
+    @apply focus:outline-none focus:ring-0 dark:bg-none dark:text-cream;
   }
 </style>
 
