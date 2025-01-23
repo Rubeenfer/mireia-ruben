@@ -9,24 +9,26 @@ const t = translations[lang];
 <section id="ourStory" class="section">
   <div class="overlay top-overlay"></div>
   <div class="section-container">
-    <div class="w-1/3"></div>
+    <div class="md:w-1/3"></div>
     <div
-      class="flex w-1/3 flex-col items-center justify-center gap-10 bg-leaf p-10 dark:bg-sky"
+      class="mx-4 flex w-full flex-row items-center justify-center bg-leaf p-6 dark:flex-row-reverse dark:bg-sky sm:mx-0 sm:w-3/4 sm:p-10 md:w-2/3"
     >
-      <h2 class="heading-2 section-content">
-        {t.ourStory.title}
-      </h2>
-      <div class="section-content">
-        <p class="paragraph">
-          {t.ourStory.paragraph1}
-        </p>
-        <p class="paragraph">
-          {t.ourStory.paragraph2}
-        </p>
+      <div class="flex w-full flex-col gap-10 lg:w-5/6 xl:w-1/2">
+        <h2 class="heading-2 section-content">
+          {t.ourStory.title}
+        </h2>
+        <div class="section-content">
+          <p class="paragraph">
+            {t.ourStory.paragraph1}
+          </p>
+          <p class="paragraph">
+            {t.ourStory.paragraph2}
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="flex w-1/3 items-center justify-center bg-leaf dark:bg-sky">
-      <Rings />
+      <div class="hidden items-center justify-center xl:flex xl:w-1/2">
+        <Rings />
+      </div>
     </div>
   </div>
   <div class="overlay bottom-overlay"></div>
@@ -58,8 +60,7 @@ const t = translations[lang];
   }
 
   .section-content {
-    @apply max-w-3xl text-pretty rounded-lg px-6 text-center;
-    @apply sm:px-8 md:mr-5 dark:md:ml-5;
+    @apply max-w-3xl text-pretty rounded-lg text-center;
     @apply dark:lg:mx-auto;
   }
 
