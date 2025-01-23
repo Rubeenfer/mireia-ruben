@@ -14,11 +14,11 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
   <div class="section-container">
     <div class="card">
       <h3 class="heading-3">¿Dónde?</h3>
-      <div class="mx-4 flex flex-col items-center justify-center gap-1">
+      <div class="flex flex-col items-center justify-center gap-1">
         <p class="paragraph">Farinera de Sant Lluís</p>
         <p class="paragraph">Carrer de Sant Lluís, 17600 Figueres, Girona</p>
         <iframe
-          class="pt-4 shadow-lg md:aspect-square md:w-80"
+          class="w-full pt-4 shadow-lg md:aspect-square md:w-64 lg:w-80"
           referrerpolicy="no-referrer-when-downgrade"
           src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
           allowfullscreen
@@ -28,7 +28,7 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
     </div>
     <div class="card">
       <h2 class="heading-3">¿Cúando?</h2>
-      <div class="mx-4 flex flex-col items-center justify-center gap-1">
+      <div class="mx-0 flex flex-col items-center justify-center gap-1">
         <p class="paragraph">La ceremonia dará comienzo a las</p>
         <p class="paragraph">13:00h el día 5 de Abril de 2025</p>
 
@@ -41,15 +41,15 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 <style>
   .section {
     @apply flex min-w-[100dvw] items-start justify-center;
-
     @apply bg-leaf dark:bg-sky;
   }
 
   .section-container {
-    @apply container mt-32 flex flex-col gap-64 py-20 md:flex-row;
+    @apply container mt-32 flex flex-col justify-evenly gap-4 py-4 sm:gap-10 sm:py-10 md:flex-row md:gap-20 md:py-20 lg:gap-64;
   }
   .card {
-    @apply container flex flex-col justify-between gap-10 bg-olive bg-cover bg-no-repeat p-20 shadow-lg dark:bg-dark md:w-1/2;
+    @apply mx-4 flex flex-col justify-between gap-10 bg-olive bg-cover bg-no-repeat p-6 shadow-lg md:mx-0;
+    @apply dark:bg-dark md:w-80 md:p-10 lg:w-1/2;
   }
 
   .section-content {
@@ -61,6 +61,6 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
   }
 
   .paragraph {
-    @apply mb-0 text-pretty text-center font-light text-dark dark:text-gray-300 md:w-80;
+    @apply mb-0 text-pretty text-center font-light text-dark dark:text-gray-300 md:w-64 lg:w-80;
   }
 </style>
