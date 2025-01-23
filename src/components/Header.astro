@@ -4,6 +4,7 @@ import ThemeToogle from "./ThemeToogle.astro";
 import { translations } from "../i18n/translations";
 import LanguageSelector from "./LanguageSelector.astro";
 
+const url = "http://localhost:4321";
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 ---
@@ -27,7 +28,9 @@ const t = translations[lang];
           class="md:left-[calc(50% - 40px)] absolute left-0 top-0 h-28 w-28 fill-dark dark:fill-cream lg:h-40 lg:w-40"
         />
       </a>
-
+      <nav class="navList2">
+        <a href={`${url}/rsvp/#register/`} class="navItem">¿Te apuntas?</a>
+      </nav>
       <div class="options">
         <ThemeToogle />
         <LanguageSelector lang={lang} />
@@ -37,10 +40,6 @@ const t = translations[lang];
 </header>
 
 <style>
-  .menu-container {
-    @apply flex items-center justify-end md:justify-center;
-  }
-
   .header {
     @apply fixed left-0 right-0 top-0 z-50 max-w-[100dvw] bg-olive bg-opacity-95 shadow-md transition-colors duration-300;
     @apply border-b-[1px] border-dark dark:border-cream dark:bg-dark dark:bg-opacity-95;
@@ -48,17 +47,28 @@ const t = translations[lang];
   .header-container {
     @apply m-auto max-w-screen-xl px-3 py-3 lg:px-6 lg:py-6;
   }
-  .navList {
-    @apply hidden w-0 md:w-2/5;
-    @apply md:flex md:items-center md:justify-between lg:justify-start lg:space-x-8 xl:space-x-8;
+  .menu-container {
+    @apply flex items-center justify-end gap-4;
   }
-  .navItem {
-    @apply text-base font-light text-dark transition-colors duration-300 hover:text-cream lg:text-base;
-    @apply dark:text-cream dark:hover:text-olive;
+  .navList {
+    @apply ml-28 hidden w-auto gap-4 md:flex md:w-2/5;
+    @apply md:ml-0 md:items-center md:justify-between;
   }
   .logo {
     @apply flex w-0 items-center justify-center md:w-1/5;
   }
+  .navList2 {
+    @apply flex w-auto md:w-2/5;
+    @apply md:items-center md:justify-end;
+  }
+  .options {
+    @apply flex w-auto items-center justify-end gap-4 md:w-1/5;
+  }
+  .navItem {
+    @apply max-w-min whitespace-nowrap text-sm font-light text-dark transition-colors duration-300 hover:text-cream;
+    @apply dark:text-cream dark:hover:text-olive md:text-xs lg:text-base;
+  }
+
   .common {
     @apply absolute left-[0.3rem] right-0 w-0 border-[3.2rem] border-x-transparent transition-colors duration-300;
     @apply md:left-0 md:me-auto md:ms-auto lg:border-[4.5rem];
@@ -70,8 +80,5 @@ const t = translations[lang];
   .triangle2 {
     @apply top-1.5 border-t-0 border-b-olive;
     @apply dark:border-b-dark lg:top-2 lg:border-t-0;
-  }
-  .options {
-    @apply flex w-full items-center justify-end gap-4 md:w-2/5;
   }
 </style>

@@ -15,15 +15,15 @@
 
 <style>
   .icon {
-    @apply absolute bottom-[0.2rem] left-1 h-6 w-6 fill-none stroke-cream duration-300 dark:stroke-dark;
+    @apply absolute bottom-[0.2rem] left-[0.2rem] h-6 w-6 fill-none stroke-dark duration-300 dark:stroke-cream md:left-1 md:stroke-dark md:dark:stroke-dark;
   }
 
   input:checked + .slider > .icon {
-    @apply translate-x-7;
+    @apply md:translate-x-7;
   }
 
   .switch {
-    @apply relative h-8 w-16;
+    @apply relative h-8 w-8 md:w-16;
   }
 
   .switch input {
@@ -35,11 +35,11 @@
   }
 
   .slider:before {
-    @apply absolute bottom-[0.2rem] left-1 h-6 w-6 rounded-full bg-dark duration-300 content-[""] dark:bg-cream;
+    @apply absolute bottom-[0.2rem] left-[0.2rem] h-6 w-6 rounded-full duration-300 content-[""] md:left-1 md:bg-cream;
   }
 
   input:checked + .slider:before {
-    @apply translate-x-7;
+    @apply md:translate-x-7;
   }
 </style>
 

@@ -15,7 +15,7 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
     @apply rounded-md border-[1px] border-dark px-2 py-0.5 dark:border-cream;
   }
   .select {
-    @apply w-12 bg-transparent text-sm text-dark;
+    @apply w-9 bg-transparent text-sm text-dark md:w-12;
     @apply focus:outline-none focus:ring-0 dark:bg-none dark:text-cream;
   }
 </style>

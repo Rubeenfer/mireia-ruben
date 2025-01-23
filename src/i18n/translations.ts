@@ -3,17 +3,21 @@ export const translations = {
   es: {
     nav: {
       ourStory: {
-        text: "¿Cómo y por qué?",
+        text: "Nuestra historia",
         link: `${url}/#ourStory/`,
       },
       whereAndWhen: {
         text: "¿Dónde y cúando?",
         link: `${url}/#whenAndWhere/`,
       },
-      register: {
+      collaborators: {
+        text: "Colaboradores",
+        link: `${url}/#collaborators/`,
+      },
+      /*      register: {
         text: "¿Te apuntas? ",
         link: `${url}/rsvp/#register/`,
-      },
+      }, */
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",
