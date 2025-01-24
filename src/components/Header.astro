@@ -15,7 +15,7 @@ const t = translations[lang];
       <nav class="navList">
         {
           Object.entries(t.nav).map(([key, { text, link }]) => (
-            <a href={link} class="navItem">
+            <a href={link} class="navItem text-kalam">
               {text}
             </a>
           ))
@@ -29,7 +29,9 @@ const t = translations[lang];
         />
       </a>
       <nav class="navList2">
-        <a href={`${url}/rsvp/#register/`} class="navItem">¿Te apuntas?</a>
+        <a href={t.register.link} class="navItem text-kalam"
+          >{t.register.text}</a
+        >
       </nav>
       <div class="options">
         <ThemeToogle />

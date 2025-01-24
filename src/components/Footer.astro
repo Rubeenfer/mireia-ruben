@@ -3,14 +3,28 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <div class="container mx-auto flex justify-evenly px-4 text-center">
-    <p class="mb-2">&copy; {currentYear} Mireia & Rubén's Wedding</p>
-    <p>Designed with love for our special day</p>
+  <div
+    class="mx-auto flex flex-col justify-evenly px-4 py-4 text-center sm:items-start sm:text-left"
+  >
+    <p class="text-kalam">
+      Mireia: <a href="tel:+34636505445">+34 636 50 54 45</a>
+    </p>
+    <p class="text-kalam">
+      Rubén: <a href="tel:+34600864251">+34 600 86 42 51</a>
+    </p>
+  </div>
+
+  <div
+    class="mx-auto flex flex-col justify-between px-4 py-4 text-center sm:text-right"
+  >
+    <p class="text-kalam">&copy; {currentYear} Mireia & Rubén's Wedding</p>
+    <p class="text-kalam">Designed with love for our special day</p>
   </div>
 </footer>
 
 <style>
   .footer {
-    @apply z-50 max-w-[100dvw] bg-olive py-8 shadow-md transition-colors duration-300 dark:bg-dark;
+    @apply z-50 flex max-w-[100dvw] flex-col items-center justify-center bg-leaf py-8 shadow-md sm:flex-row;
+    @apply dark:bg-sky;
   }
 </style>

@@ -13,6 +13,12 @@ import Divider from "../sections/Divider.astro";
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 ---
 
+<script>
+  const language = ["es", "ca", "en"].find((lang) =>
+    window.location.href.includes(`/${lang}`),
+  );
+  if (!language) window.location.href = `${window.location.href}es`;
+</script>
 <Layout title="Mireia & Rubén" lang={lang}>
   <div class="flex min-h-screen flex-col">
     <Header lang={lang} />

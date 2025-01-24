@@ -23,14 +23,16 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 <script>
   const languageSelect = document.getElementById("select") as HTMLSelectElement;
   languageSelect.addEventListener("change", (event) => {
-    const { origin, hash, pathname } = window.location;
-    const language = (event.target as HTMLSelectElement).value;
+    const newLanguage = (event.target as HTMLSelectElement).value;
 
-    console.log("Pathname: ", pathname.split("/")[2]);
-    const path = pathname.split("/")[2];
-    if (language === "es")
-      window.location.href = `${origin}${path ? `/${path}` : ""}/${hash}`;
+    const language = ["es", "ca", "en"].find((lang) =>
+      window.location.href.includes(`/${lang}`),
+    );
+    const newHref = window.location.href.replace(
+      `/${language}`,
+      `/${newLanguage}`,
+    );
 
-    window.location.href = `${origin}${path ? `/${path}` : ""}/${hash}`;
+    window.location.href = newHref;
   });
 </script>

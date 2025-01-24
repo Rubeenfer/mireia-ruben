@@ -4,20 +4,20 @@ export const translations = {
     nav: {
       ourStory: {
         text: "Nuestra historia",
-        link: `${url}/#ourStory/`,
+        link: `${url}/es/#ourStory`,
       },
       whereAndWhen: {
         text: "¿Dónde y cúando?",
-        link: `${url}/#whenAndWhere/`,
+        link: `${url}/es/#whenAndWhere`,
       },
       collaborators: {
         text: "Colaboradores",
-        link: `${url}/#collaborators/`,
+        link: `${url}/es/#collaborators`,
       },
-      /*      register: {
-        text: "¿Te apuntas? ",
-        link: `${url}/rsvp/#register/`,
-      }, */
+    },
+    register: {
+      text: "¿Te apuntas?",
+      link: `${url}/es/rsvp/#register`,
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",
@@ -89,17 +89,21 @@ export const translations = {
   ca: {
     nav: {
       ourStory: {
-        text: "Com y per què?",
-        link: `${url}/ca/#ourStory/`,
+        text: "La nostra història",
+        link: `${url}/ca/#ourStory`,
       },
       whereAndWhen: {
         text: "On i quan?",
-        link: `${url}/ca/#whenAndWhere/`,
+        link: `${url}/ca/#whenAndWhere`,
       },
-      register: {
-        text: "T'apuntes?",
-        link: `${url}/ca/rsvp/#register/`,
+      collaborators: {
+        text: "Colaboradors",
+        link: `${url}/ca/#collaborators`,
       },
+    },
+    register: {
+      text: "T'apuntes?",
+      link: `${url}/ca/rsvp/#register`,
     },
     hero: {
       date: "5 d'Abril, 2025 a les 13:00",
@@ -169,17 +173,21 @@ export const translations = {
   en: {
     nav: {
       ourStory: {
-        text: "How and why?",
-        link: `${url}/en/#ourStory/`,
+        text: "Our story",
+        link: `${url}/en/#ourStory`,
       },
       whereAndWhen: {
-        text: "Where and when?",
-        link: `${url}/en/#whenAndWhere/`,
+        text: "Where & when?",
+        link: `${url}/en/#whenAndWhere`,
       },
-      register: {
-        text: "Are you in?",
-        link: `${url}/en/rsvp/#register/`,
+      collaborators: {
+        text: "Collaborators",
+        link: `${url}/en/#collaborators`,
       },
+    },
+    register: {
+      text: "Are you in?",
+      link: `${url}/en/rsvp/#register`,
     },
     hero: {
       date: "April 5, 2025 at 1:00 PM",
