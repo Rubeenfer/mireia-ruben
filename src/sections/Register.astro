@@ -11,33 +11,30 @@ const t = translations[lang];
       {t.rsvp.title}
     </h2>
     <div class="form">
-      <div
-        data-tf-live="01JHW4Q1R9F4VGAEMBW69GAQZE"
-        data-tf-hide-headers
-        data-tf-auto-resize="500, 800"
-        data-tf-disable-scroll
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd12uYHbl1J8uUBxaLWX-I6UeKzU-d4lVApSnuavKRXvIoK9w/viewform?embedded=true"
+        width="640"
+        height="1118"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">Cargando…</iframe
       >
-      </div>
-
-      <script is:inline src="//embed.typeform.com/next/embed.js"></script>
     </div>
   </div>
 </section>
 
 <style>
   .section {
-    @apply flex items-start justify-center border-t-[1px] border-dark bg-day2_100_0;
-    @apply dark:border-cream dark:bg-night2_0_100;
+    @apply flex items-start justify-center bg-olive dark:bg-dark;
   }
 
   .section-container {
-    @apply container flex min-w-[100dvw] max-w-lg flex-col gap-20 rounded-md py-20;
+    @apply container flex min-w-[100dvw] max-w-lg flex-col gap-10 rounded-md py-20;
     @apply bg-cover bg-no-repeat;
   }
 
   .form {
-    @apply m-auto w-[90dvw] rounded-lg shadow-lg;
-    @apply sm:w-9/12 xl:w-1/2;
+    @apply m-auto rounded-lg;
   }
 </style>
 
