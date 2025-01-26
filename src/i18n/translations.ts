@@ -1,23 +1,22 @@
-const url = "mireiaruben.com";
 export const translations = {
   es: {
     nav: {
       ourStory: {
         text: "Nuestra historia",
-        link: `${url}/es/#ourStory`,
+        link: `/es/#ourStory`,
       },
       whereAndWhen: {
         text: "¿Dónde y cúando?",
-        link: `${url}/es/#whenAndWhere`,
+        link: `/es/#whenAndWhere`,
       },
       collaborators: {
         text: "Colaboradores",
-        link: `${url}/es/#collaborators`,
+        link: `/es/#collaborators`,
       },
     },
     register: {
       text: "¿Te apuntas?",
-      link: `${url}/es/rsvp/#register`,
+      link: `/es/rsvp/#register`,
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00",
@@ -90,20 +89,20 @@ export const translations = {
     nav: {
       ourStory: {
         text: "La nostra història",
-        link: `${url}/ca/#ourStory`,
+        link: `/ca/#ourStory`,
       },
       whereAndWhen: {
         text: "On i quan?",
-        link: `${url}/ca/#whenAndWhere`,
+        link: `/ca/#whenAndWhere`,
       },
       collaborators: {
         text: "Colaboradors",
-        link: `${url}/ca/#collaborators`,
+        link: `/ca/#collaborators`,
       },
     },
     register: {
       text: "T'apuntes?",
-      link: `${url}/ca/rsvp/#register`,
+      link: `/ca/rsvp/#register`,
     },
     hero: {
       date: "5 d'Abril, 2025 a les 13:00",
@@ -174,20 +173,20 @@ export const translations = {
     nav: {
       ourStory: {
         text: "Our story",
-        link: `${url}/en/#ourStory`,
+        link: `/en/#ourStory`,
       },
       whereAndWhen: {
         text: "Where & when?",
-        link: `${url}/en/#whenAndWhere`,
+        link: `/en/#whenAndWhere`,
       },
       collaborators: {
         text: "Collaborators",
-        link: `${url}/en/#collaborators`,
+        link: `/en/#collaborators`,
       },
     },
     register: {
       text: "Are you in?",
-      link: `${url}/en/rsvp/#register`,
+      link: `/en/rsvp/#register`,
     },
     hero: {
       date: "April 5, 2025 at 1:00 PM",
