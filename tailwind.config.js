@@ -101,6 +101,8 @@ module.exports = {
         ourStory,
         ourStoryMobile,
         schedule,
+        young: `url("/images/young.jpg")`,
+        adult: `url("/images/adult.jpg")`,
       },
     },
   },
