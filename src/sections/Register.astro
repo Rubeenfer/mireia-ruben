@@ -3,6 +3,12 @@ import { translations } from "../i18n/translations";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
+
+const forms: Record<"es" | "ca" | "en", string> = {
+  es: "https://docs.google.com/forms/d/e/1FAIpQLSd12uYHbl1J8uUBxaLWX-I6UeKzU-d4lVApSnuavKRXvIoK9w/viewform?embedded=true",
+  en: "https://docs.google.com/forms/d/e/1FAIpQLSfeDYkSyMfU7jHUhm_eFboTpxoD0ZoXlrXxXYGK-RaTSalTYQ/viewform?embedded=true",
+  ca: "https://docs.google.com/forms/d/e/1FAIpQLSd29IycBceZ3PaNTNUdY2n_JW7vcSx_IpPgBmbtC2WhkBVx9g/viewform?embedded=true",
+};
 ---
 
 <section id="register" class="section">
@@ -11,14 +17,7 @@ const t = translations[lang];
       {t.rsvp.title}
     </h2>
     <div class="form">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSd12uYHbl1J8uUBxaLWX-I6UeKzU-d4lVApSnuavKRXvIoK9w/viewform?embedded=true"
-        width="640"
-        height="1118"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">Cargando…</iframe
-      >
+      <iframe src={forms[lang]} class="h-[100dvh] w-[100dvw]"> </iframe>
     </div>
   </div>
 </section>

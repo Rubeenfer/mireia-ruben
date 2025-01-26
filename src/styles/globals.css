@@ -105,3 +105,12 @@
 * {
   font-family: "Red Hat Display", sans-serif, system-ui;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
