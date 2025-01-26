@@ -1,7 +1,7 @@
 ---
 import Timeline from "../components/Timeline.astro";
 import { translations } from "../i18n/translations";
-import { API_KEY } from "astro:env/server";
+import { API_SECRET } from "astro:env/server";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
@@ -20,7 +20,7 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
         <iframe
           class="w-full pt-4 shadow-lg md:aspect-square md:w-64 lg:w-80"
           referrerpolicy="no-referrer-when-downgrade"
-          src=`${MAP_BASE_URL}?key=${API_KEY}&${MAP_PARAMETERS}`
+          src=`${MAP_BASE_URL}?key=${API_SECRET}&${MAP_PARAMETERS}`
           allowfullscreen
         >
         </iframe>

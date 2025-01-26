@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   env: {
     schema: {
-      API_KEY: envField.string({ context: "server", access: "secret" }),
+      API_SECRET: envField.string({ context: "server", access: "secret" }),
     },
   },
 });
