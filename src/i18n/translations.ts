@@ -1,4 +1,4 @@
-const url = "http://localhost:4321";
+const url = "mireiaruben.com";
 export const translations = {
   es: {
     nav: {

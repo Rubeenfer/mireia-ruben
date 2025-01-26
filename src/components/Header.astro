@@ -4,7 +4,6 @@ import ThemeToogle from "./ThemeToogle.astro";
 import { translations } from "../i18n/translations";
 import LanguageSelector from "./LanguageSelector.astro";
 
-const url = "http://localhost:4321";
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 ---
