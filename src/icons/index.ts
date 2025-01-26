@@ -13,23 +13,25 @@ import PartyIcon from './Party.astro';
 import Photo from './Photo.astro';
 import Ring from './Ring.astro';
 import Shoes from './Shoes.astro';
+import Suit from './Suit.astro';
 import Woman from './Woman.astro';
 
 export {
   AppetizerIcon,
+  Catering,
   CeremonyIcon,
+  DJ,
+  Dress,
   Farinera,
+  Light,
+  Location,
   Logo,
   LunchIcon,
-  PartyIcon,
-  Woman,
   Man,
-  Catering,
-  DJ,
-  Light,
+  PartyIcon,
   Photo,
-  Location,
-  Dress,
   Ring,
   Shoes,
+  Suit,
+  Woman,
 };

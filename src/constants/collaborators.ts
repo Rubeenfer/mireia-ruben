@@ -35,6 +35,11 @@ export const collaborators = [
     link: "escueratelier.com",
   },
   {
+    name: "Xeviot",
+    phone: "+34 937 48 42 49",
+    link: "xeviot.es",
+  },
+  {
     name: "The Forest Shoes",
     phone: "+34 932 17 67 89",
     link: "www.instagram.com/theforestshoes",
