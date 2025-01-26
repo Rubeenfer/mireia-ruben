@@ -1,11 +1,11 @@
 ---
 import Timeline from "../components/Timeline.astro";
 import { translations } from "../i18n/translations";
+import { API_KEY } from "astro:env/server";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 
-const API_KEY = import.meta.env.API_KEY;
 const MAP_PARAMETERS = "q=La+Farinera+Sant+Llu%C3%ADs&maptype=roadmap&zoom=15";
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
