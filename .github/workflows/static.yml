@@ -42,6 +42,8 @@ jobs:
 
       # Paso 4: Construir el proyecto Astro
       - name: Build Astro site
+        env:
+          API_SECRET: ${{ secrets.API_SECRET }}
         run: npm run build
 
       # Paso 5: Subir el artefacto generado (la carpeta dist)
