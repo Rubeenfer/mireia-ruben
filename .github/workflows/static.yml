@@ -1,0 +1,57 @@
+# Workflow para desplegar contenido estático generado con Astro a GitHub Pages
+name: Deploy Astro site to GitHub Pages
+
+on:
+  # Corre el workflow cuando hay un push en la rama principal
+  push:
+    branches: ["release"]
+
+  # Permite ejecutar manualmente el workflow desde la pestaña de Actions
+  workflow_dispatch:
+
+# Configuración de permisos
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Paso 1: Clonar el repositorio
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Paso 2: Configurar Node.js (compatible con Astro)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Versión recomendada para Astro
+
+      # Paso 3: Instalar dependencias del proyecto
+      - name: Install dependencies
+        run: npm ci
+
+      # Paso 4: Construir el proyecto Astro
+      - name: Build Astro site
+        run: npm run build
+
+      # Paso 5: Subir el artefacto generado (la carpeta dist)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Especificar la carpeta donde Astro genera el sitio estático
+          path: "./dist"
+
+      # Paso 6: Desplegar en GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
