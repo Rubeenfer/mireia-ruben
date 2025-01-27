@@ -13,7 +13,6 @@ const farineraDay = "/images/farinera_day.jpg";
 const farineraNight = "/images/farinera_night.jpg";
 const ourStoryDay = "/images/our_story.jpg";
 const ourStoryNight = "/images/test2.jpeg";
-const dock = "/images/dock.jpg";
 
 // LINEAR-COLORS:
 const oliveOverlay = `linear-gradient(0deg, ${transparent} 0%, ${olive} 50%)`;
@@ -30,9 +29,6 @@ const ourStoryMobile = `linear-gradient(0deg, ${olive}CC, ${olive}CC), url(${our
 const ourStory = `linear-gradient(95deg, ${olive} 10%, ${transparent} 20%, ${transparent} 80%, ${olive} 90%),  url(${ourStoryDay})`;
 const darkOurStoryMobile = `linear-gradient(0deg, ${dark}CC, ${dark}CC), url(${ourStoryNight})`;
 const darkOurStory = `linear-gradient(85deg, ${dark} 10%, ${transparent} 20%, ${transparent} 80%, ${dark} 90%), url(${ourStoryNight})`;
-
-const schedule = `linear-gradient(0deg, ${transparent}, ${leaf}CC), url(${dock})`;
-const darkSchedule = `linear-gradient(0deg,  ${transparent}, ${dark}CC), url(${dock})`;
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
