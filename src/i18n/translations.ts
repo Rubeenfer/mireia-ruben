@@ -6,7 +6,7 @@ export const translations = {
         link: `/es/#ourStory`,
       },
       whereAndWhen: {
-        text: "¿Dónde y cúando?",
+        text: "¿Dónde y cuándo?",
         link: `/es/#whenAndWhere`,
       },
       collaborators: {
@@ -19,7 +19,7 @@ export const translations = {
       link: `/es/rsvp/#register`,
     },
     hero: {
-      date: "5 de Abril, 2025 a las 13:00",
+      date: "5 de Abril, 2025 a las 13:00 h",
       location: "La Farinera de Sant Lluís, Figueres",
     },
     countdown: {
@@ -35,54 +35,38 @@ export const translations = {
       paragraph2:
         "Finalmente, en una víspera de San Juan, Mireia consiguió llevar a Rubén al centro de la pista a bailar, y desde entonces se han hecho inseparables a base de risas y mucho amor.",
     },
-    rsvp: {
-      title: "Confirmar asistencia",
-      form: {
-        attendance: "¿Podrás asistir?",
-        attendanceSelect: "Por favor, selecciona una opción",
-        attendanceYes: "Sí, asistiré",
-        attendanceNo: "Lo siento, no podré asistir",
-        guestInfo: "Información del invitado",
-        additionalGuestInfo: "Información del invitado adicional",
-        name: "Nombre",
-        surname: "Apellidos",
-        email: "Correo electrónico",
-        phone: "Teléfono",
-        menu: "Opción de menú",
-        menuSelect: "Selecciona una opción",
-        menuMeat: "Carne",
-        menuFish: "Pescado",
-        menuVegetarian: "Vegetariano",
-        dietary: {
-          question: "Intolerancias",
-          gluten: "Sin gluten",
-          lactose: "Sin lactosa",
-          other: "Otras",
-        },
-        addGuest: "Añadir invitado",
-        comments: "Comentarios adicionales",
-        submit: "Enviar",
-        successMessage: "¡Gracias por confirmar tu asistencia!",
-        errorMessage:
-          "Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo.",
-      },
-    },
-    photoGallery: {
-      title: "Galería de Fotos",
-      imageAlt: "Imagen de boda {index}",
-    },
     location: {
-      title: "¿Dónde será?",
-      address1: "Carrer de Sant Lluís",
-      address2: "17600 Figueres, Girona",
+      title: "¿Dónde?",
+      address1: "Calle de Sant Lluís",
+      address2: "17600 Figueras, Gerona",
+      text1: "La cerimònia començarà a les",
+      text2: "13:00 h del dia 5 d'abril de 2025",
       place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "¿Cúando sucederá?",
-      ceremony: "Ceremonia",
-      appetizer: "Aperitivo",
-      lunch: "Comida",
-      party: "Fiesta",
+      title: "¿Cuándo?",
+      ceremony: {
+        text: "Ceremonia",
+        time: "13:00 h",
+      },
+      appetizer: {
+        text: "Aperitivo",
+        time: "14:00 h",
+      },
+      lunch: {
+        text: "Comida",
+        time: "17:00 h",
+      },
+      party: {
+        text: "Fiesta",
+        time: "20:00 h",
+      },
+    },
+    collaborators: {
+      title: "Col·laboradors",
+    },
+    rsvp: {
+      title: "Confirmar asistencia",
     },
   },
   ca: {
@@ -96,7 +80,7 @@ export const translations = {
         link: `/ca/#whenAndWhere`,
       },
       collaborators: {
-        text: "Colaboradors",
+        text: "Col·laboradors",
         link: `/ca/#collaborators`,
       },
     },
@@ -105,7 +89,7 @@ export const translations = {
       link: `/ca/rsvp/#register`,
     },
     hero: {
-      date: "5 d'Abril, 2025 a les 13:00",
+      date: "5 d'abril, 2025 a les 13:00 h",
       location: "La Farinera de Sant Lluís, Figueres",
     },
     countdown: {
@@ -115,58 +99,42 @@ export const translations = {
       seconds: "segons",
     },
     ourStory: {
-      title: "La Nostra Història",
-      paragraph1: `La seva història va començar com moltes altres, en una nit de festa. Encara que ja es coneixien des de feia 6 anys, van fer falta moltes visites de Rubén a la discoteca per conquerir la Mireia, que hi era cap de setmana sí i cap de setmana també.`,
-      paragraph2: `Finalment, en una vigília de Sant Joan, la Mireia va aconseguir portar Rubén al centre de la pista a ballar, i des de llavors s'han fet inseparables a força de rialles i molt d'amor.`,
-    },
-    rsvp: {
-      title: "Confirmar assistència",
-      form: {
-        attendance: "Podràs assistir?",
-        attendanceSelect: "Si us plau, selecciona una opció",
-        attendanceYes: "Sí, hi assistiré",
-        attendanceNo: "Ho sento, no hi podré assistir",
-        guestInfo: "Informació del convidat",
-        additionalGuestInfo: "Informació del convidat addicional",
-        name: "Nom",
-        surname: "Cognoms",
-        email: "Correu electrònic",
-        phone: "Telèfon",
-        menu: "Opció de menú",
-        menuSelect: "Selecciona una opció",
-        menuMeat: "Carn",
-        menuFish: "Peix",
-        menuVegetarian: "Vegetarià",
-        dietary: {
-          question: "Intoleràncies",
-          gluten: "Sense gluten",
-          lactose: "Sense lactosa",
-          other: "Altres",
-        },
-        addGuest: "Afegir convidat",
-        comments: "Comentaris addicionals",
-        submit: "Enviar",
-        successMessage: "Gràcies per confirmar la teva assistència!",
-        errorMessage:
-          "Hi ha hagut un error en enviar la teva confirmació. Si us plau, torna-ho a provar.",
-      },
-    },
-    photoGallery: {
-      title: "Galeria de Fotos",
-      imageAlt: "Imatge de casament {index}",
+      title: "La nostra història",
+      paragraph1: `La seva història va començar com moltes altres, en una nit de festa. Encara que ja es coneixien des de feia 6 anys, van fer falta moltes visites del Rubén a la discoteca per conquerir la Mireia, que hi era cap de setmana sí i cap de setmana també.`,
+      paragraph2: `Finalment, en una vigília de Sant Joan, la Mireia va aconseguir portar al Rubén al centre de la pista a ballar, i des de llavors s'han fet inseparables a força de rialles i molt d'amor.`,
     },
     location: {
-      title: "¿Dónde será?",
+      title: "On?",
       address1: "Carrer de Sant Lluís",
       address2: "17600 Figueres, Girona",
+      text1: "La cerimònia començarà a les",
+      text2: "13:00 h del dia 5 d'abril de 2025",
       place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "¿Cúando sucederá?",
-      ceremony: "Cerimònia",
-      appetizer: "Aperitiu",
-      lunch: "Dinar",
-      party: "Festa",
+      title: "Quan?",
+      ceremony: {
+        text: "Cerimònia",
+        time: "13:00 h",
+      },
+      appetizer: {
+        text: "Aperitiu",
+        time: "14:00 h",
+      },
+      lunch: {
+        text: "Dinar",
+        time: "17:00 h",
+      },
+      party: {
+        text: "Festa",
+        time: "20:00 h",
+      },
+    },
+    collaborators: {
+      title: "Col·laboradors",
+    },
+    rsvp: {
+      title: "Confirmar assistència",
     },
   },
   en: {
@@ -203,54 +171,38 @@ export const translations = {
       paragraph1: `His story began like many others, on a party night. Although they had already known each other for 6 years, it took many visits of Rubén to the disco to conquer Mireia, who was there at the weekend yes and also at the weekend.`,
       paragraph2: `Finally, on the eve of San Juan, Mireia managed to take Rubén to the center of the dance floor, and since then they have become inseparable through laughter and a lot of love.`,
     },
-    rsvp: {
-      title: "RSVP",
-      form: {
-        attendance: "Will you be able to attend?",
-        attendanceSelect: "Please select an option",
-        attendanceYes: "Yes, I will attend",
-        attendanceNo: "Sorry, I cannot attend",
-        guestInfo: "Guest Information",
-        additionalGuestInfo: "Additional Guest Information",
-        name: "Name",
-        surname: "Surname",
-        email: "Email",
-        phone: "Phone",
-        menu: "Menu option",
-        menuSelect: "Select an option",
-        menuMeat: "Meat",
-        menuFish: "Fish",
-        menuVegetarian: "Vegetarian",
-        dietary: {
-          question: "Dietary restrictions",
-          gluten: "Gluten-free",
-          lactose: "Lactose-free",
-          other: "Other",
-        },
-        addGuest: "Add guest",
-        comments: "Additional comments",
-        submit: "Submit",
-        successMessage: "Thank you for confirming your attendance!",
-        errorMessage:
-          "There was an error submitting your confirmation. Please try again.",
-      },
-    },
-    photoGallery: {
-      title: "Photo Gallery",
-      imageAlt: "Wedding image {index}",
-    },
     location: {
-      title: "¿Dónde será?",
-      place: "La Farinera de Sant Lluís",
+      title: "Where?",
       address1: "Carrer de Sant Lluís",
       address2: "17600 Figueres, Girona",
+      text1: "La cerimònia començarà a les",
+      text2: "13:00 h del dia 5 d'abril de 2025",
+      place: "La Farinera de Sant Lluís",
     },
     schedule: {
-      title: "¿Cúando sucederá?",
-      ceremony: "Ceremony",
-      appetizer: "Appetizer",
-      lunch: "Lunch",
-      party: "Party",
+      title: "When?",
+      ceremony: {
+        text: "Ceremony",
+        time: "1:00 PM",
+      },
+      appetizer: {
+        text: "Appetizer",
+        time: "2:00 PM",
+      },
+      lunch: {
+        text: "Lunch",
+        time: "5:00 PM",
+      },
+      party: {
+        text: "Party",
+        time: "8:00 PM",
+      },
+    },
+    collaborators: {
+      title: "Col·laboradors",
+    },
+    rsvp: {
+      title: "RSVP",
     },
   },
 };

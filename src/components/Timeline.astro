@@ -15,34 +15,34 @@ const t = translations[lang];
   <div class="line"></div>
   <ul class="list">
     <li class="list-element">
-      <span class="time text-kalam">13:00</span>
+      <span class="time text-kalam">{t.schedule.ceremony.time}</span>
       <div class="icon-container">
         <CeremonyIcon className="h-7 w-7 fill-black dark:fill-white" />
       </div>
       <span class="event text-kalam">
-        {t.schedule.ceremony}
+        {t.schedule.ceremony.text}
       </span>
     </li>
     <li class="list-element">
-      <span class="time text-kalam">14:00</span>
+      <span class="time text-kalam">{t.schedule.appetizer.time}</span>
       <div class="icon-container">
         <AppetizerIcon className="h-7 w-7 fill-black dark:fill-white" />
       </div>
-      <span class="event text-kalam">{t.schedule.appetizer}</span>
+      <span class="event text-kalam">{t.schedule.appetizer.text}</span>
     </li>
     <li class="list-element">
-      <span class="time text-kalam">17:00</span>
+      <span class="time text-kalam">{t.schedule.lunch.time}</span>
       <div class="icon-container">
         <LunchIcon className="h-7 w-7 fill-black dark:fill-white" />
       </div>
-      <span class="event text-kalam">{t.schedule.lunch}</span>
+      <span class="event text-kalam">{t.schedule.lunch.text}</span>
     </li>
     <li class="list-element">
-      <span class="time text-kalam">20:00</span>
+      <span class="time text-kalam">{t.schedule.party.time}</span>
       <div class="icon-container">
         <PartyIcon className="h-7 w-7 fill-black dark:fill-white" />
       </div>
-      <span class="event text-kalam">{t.schedule.party}</span>
+      <span class="event text-kalam">{t.schedule.party.text}</span>
     </li>
   </ul>
 </div>

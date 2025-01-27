@@ -1,6 +1,7 @@
 ---
 import Collaborator from "../components/Collaborator.astro";
 import { collaborators } from "../constants/collaborators.ts";
+import { translations } from "../i18n/translations";
 import {
   Catering,
   DJ,
@@ -12,11 +13,14 @@ import {
   Shoes,
   Suit,
 } from "../icons";
+
+const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
+const t = translations[lang];
 ---
 
 <section id="collaborators" class="section">
   <div class="section-container">
-    <h3 class="heading-2">Colaboradores</h3>
+    <h3 class="heading-2">{t.collaborators.title}</h3>
     <div class="section-content">
       <a href={`https://${collaborators[0].link}`} class="item" target="_blank">
         <div class="icon">

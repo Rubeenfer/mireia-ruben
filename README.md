@@ -35,3 +35,7 @@ Los archivos generados estarán en el directorio `dist`.
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT.
+
+// TODO:
+
+- Check CountdownTimer translations when singular
