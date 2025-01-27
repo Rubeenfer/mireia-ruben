@@ -19,7 +19,7 @@ export const translations = {
       link: `/es/rsvp/#confirmar`,
     },
     hero: {
-      date: "5 de Abril, 2025 a las 13:00 h",
+      date: "5 de abril, 2025 a las 13:00 h",
       location: "La Farinera de Sant Lluís, Figueres",
     },
     countdown: {
@@ -29,19 +29,18 @@ export const translations = {
       seconds: "segundos",
     },
     ourStory: {
-      title: "Nuestra Historia",
+      title: "Nuestra historia",
       paragraph1:
-        "Su historia empezó como muchas otras, en una noche de fiesta. Aunque ya se conocían desde hacía 6 años, hicieron falta muchas visitas de Rubén a la discoteca para conquistar a Mireia, que estaba allí fin de semana sí y fin de semana también.",
+        "Su historia empezó, como muchas otras, en una noche de fiesta. Aunque ya se conocían desde hacía 6 años, hicieron falta muchas visitas de Rubén a la discoteca para conquistar a Mireia, que estaba allí fin de semana sí y fin de semana también.",
       paragraph2:
         "Finalmente, en una víspera de San Juan, Mireia consiguió llevar a Rubén al centro de la pista a bailar, y desde entonces se han hecho inseparables a base de risas y mucho amor.",
     },
     location: {
       title: "¿Dónde?",
-      address1: "Calle de Sant Lluís",
-      address2: "17600 Figueras, Gerona",
-      text1: "La cerimònia començarà a les",
-      text2: "13:00 h del dia 5 d'abril de 2025",
-      place: "La Farinera de Sant Lluís",
+      address1: "La Farinera de Sant Lluís, N-2, Km.761, 2",
+      address2: "17706 Pont de Molins, Girona, España",
+      text1: "La ceremonia dará comienzo a las",
+      text2: "13:00 h del día 5 d'abril de 2025",
     },
     schedule: {
       title: "¿Cuándo?",
@@ -105,11 +104,10 @@ export const translations = {
     },
     location: {
       title: "On?",
-      address1: "Carrer de Sant Lluís",
-      address2: "17600 Figueres, Girona",
+      address1: "La Farinera de Sant Lluís, N-2, Km.761, 2",
+      address2: "17706 Pont de Molins, Girona, Espanya",
       text1: "La cerimònia començarà a les",
       text2: "13:00 h del dia 5 d'abril de 2025",
-      place: "La Farinera de Sant Lluís",
     },
     schedule: {
       title: "Quan?",
@@ -157,7 +155,7 @@ export const translations = {
       link: `/en/rsvp/#confirm`,
     },
     hero: {
-      date: "April 5, 2025 at 1:00 PM",
+      date: "April 5, 2025 at 1:00 p.m.",
       location: "La Farinera de Sant Lluís, Figueres",
     },
     countdown: {
@@ -167,39 +165,38 @@ export const translations = {
       seconds: "seconds",
     },
     ourStory: {
-      title: "Our Story",
-      paragraph1: `His story began like many others, on a party night. Although they had already known each other for 6 years, it took many visits of Rubén to the disco to conquer Mireia, who was there at the weekend yes and also at the weekend.`,
-      paragraph2: `Finally, on the eve of San Juan, Mireia managed to take Rubén to the center of the dance floor, and since then they have become inseparable through laughter and a lot of love.`,
+      title: "Our story",
+      paragraph1: `Their story began like many others, on a night out. Although they had known each other for 6 years, it took Rubén many visits to the club to conquer Mireia, who was there weekend after weekend.`,
+      paragraph2: `Finally, on the eve of Sant Joan, Mireia managed to get Rubén to the centre of the dance floor, and since then they have become inseparable through laughter and lots of love.`,
     },
     location: {
       title: "Where?",
-      address1: "Carrer de Sant Lluís",
-      address2: "17600 Figueres, Girona",
-      text1: "La cerimònia començarà a les",
-      text2: "13:00 h del dia 5 d'abril de 2025",
-      place: "La Farinera de Sant Lluís",
+      address1: "La Farinera de Sant Lluís, N-2, Km.761, 2",
+      address2: "17706 Pont de Molins, Girona, Spain",
+      text1: "The ceremony will begin at",
+      text2: "1:00 p.m. on April 5, 2025",
     },
     schedule: {
       title: "When?",
       ceremony: {
         text: "Ceremony",
-        time: "1:00 PM",
+        time: "1:00 p.m.",
       },
       appetizer: {
         text: "Appetizer",
-        time: "2:00 PM",
+        time: "2:00 p.m.",
       },
       lunch: {
         text: "Lunch",
-        time: "5:00 PM",
+        time: "5:00 p.m.",
       },
       party: {
         text: "Party",
-        time: "8:00 PM",
+        time: "8:00 p.m.",
       },
     },
     collaborators: {
-      title: "Col·laboradors",
+      title: "Collaborators",
     },
     rsvp: {
       title: "RSVP",

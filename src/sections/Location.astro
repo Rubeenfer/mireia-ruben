@@ -15,10 +15,8 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
     <div class="card">
       <h3 class="heading-3">{t.location.title}</h3>
       <div class="flex flex-col items-center justify-center gap-1">
-        <p class="paragraph">{t.location.place}</p>
-        <p class="paragraph">
-          {`${t.location.address1} ${t.location.address2}`}
-        </p>
+        <p class="paragraph">{t.location.address1}</p>
+        <p class="paragraph">{t.location.address2}</p>
         <iframe
           class="w-full pt-4 shadow-lg md:aspect-square md:w-64 lg:w-80"
           referrerpolicy="no-referrer-when-downgrade"
