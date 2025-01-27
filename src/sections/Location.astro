@@ -10,7 +10,7 @@ const MAP_PARAMETERS = "q=La+Farinera+Sant+Llu%C3%ADs&maptype=roadmap&zoom=15";
 const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
 ---
 
-<section id="whenAndWhere" class="section">
+<section id={t.nav.whereAndWhen.link.split("#").at(1)} class="section">
   <div class="section-container">
     <div class="card">
       <h3 class="heading-3">{t.location.title}</h3>
@@ -47,7 +47,7 @@ const MAP_BASE_URL = "https://www.google.com/maps/embed/v1/place";
   }
 
   .section-container {
-    @apply container mt-32 flex flex-col justify-evenly gap-4 py-4 sm:gap-10 sm:py-10 md:flex-row md:gap-20 md:py-20 lg:gap-64;
+    @apply container mt-32 flex flex-col justify-evenly gap-10 py-20 md:flex-row md:gap-20 md:py-20 lg:gap-64;
   }
   .card {
     @apply mx-4 flex flex-col justify-between gap-10 bg-olive bg-cover bg-no-repeat p-6 shadow-lg md:mx-0;

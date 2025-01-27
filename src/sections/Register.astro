@@ -11,7 +11,7 @@ const forms: Record<"es" | "ca" | "en", string> = {
 };
 ---
 
-<section id="register" class="section">
+<section id={t.register.link.split("#").at(1)} class="section">
   <div class="section-container">
     <h2 class="heading-2">
       {t.rsvp.title}

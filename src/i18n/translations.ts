@@ -3,20 +3,20 @@ export const translations = {
     nav: {
       ourStory: {
         text: "Nuestra historia",
-        link: `/es/#ourStory`,
+        link: `/es/#historia`,
       },
       whereAndWhen: {
         text: "¿Dónde y cuándo?",
-        link: `/es/#whenAndWhere`,
+        link: `/es/#dondeYcuando`,
       },
       collaborators: {
         text: "Colaboradores",
-        link: `/es/#collaborators`,
+        link: `/es/#colaboradores`,
       },
     },
     register: {
       text: "¿Te apuntas?",
-      link: `/es/rsvp/#register`,
+      link: `/es/rsvp/#confirmar`,
     },
     hero: {
       date: "5 de Abril, 2025 a las 13:00 h",
@@ -63,7 +63,7 @@ export const translations = {
       },
     },
     collaborators: {
-      title: "Col·laboradors",
+      title: "Colaboradores",
     },
     rsvp: {
       title: "Confirmar asistencia",
@@ -73,20 +73,20 @@ export const translations = {
     nav: {
       ourStory: {
         text: "La nostra història",
-        link: `/ca/#ourStory`,
+        link: `/ca/#historia`,
       },
       whereAndWhen: {
         text: "On i quan?",
-        link: `/ca/#whenAndWhere`,
+        link: `/ca/#onIquan`,
       },
       collaborators: {
         text: "Col·laboradors",
-        link: `/ca/#collaborators`,
+        link: `/ca/#colaboradors`,
       },
     },
     register: {
       text: "T'apuntes?",
-      link: `/ca/rsvp/#register`,
+      link: `/ca/rsvp/#confirmar`,
     },
     hero: {
       date: "5 d'abril, 2025 a les 13:00 h",
@@ -100,7 +100,7 @@ export const translations = {
     },
     ourStory: {
       title: "La nostra història",
-      paragraph1: `La seva història va començar com moltes altres, en una nit de festa. Encara que ja es coneixien des de feia 6 anys, van fer falta moltes visites del Rubén a la discoteca per conquerir la Mireia, que hi era cap de setmana sí i cap de setmana també.`,
+      paragraph1: `La seva història va començar com moltes altres, en una nit de festa. Encara que ja es coneixien des de feia 6 anys, van fer falta moltes visites del Rubén a la discoteca per conquistar la Mireia, que hi era cap de setmana sí i cap de setmana també.`,
       paragraph2: `Finalment, en una vigília de Sant Joan, la Mireia va aconseguir portar al Rubén al centre de la pista a ballar, i des de llavors s'han fet inseparables a força de rialles i molt d'amor.`,
     },
     location: {
@@ -145,7 +145,7 @@ export const translations = {
       },
       whereAndWhen: {
         text: "Where & when?",
-        link: `/en/#whenAndWhere`,
+        link: `/en/#where&when`,
       },
       collaborators: {
         text: "Collaborators",
@@ -154,7 +154,7 @@ export const translations = {
     },
     register: {
       text: "Are you in?",
-      link: `/en/rsvp/#register`,
+      link: `/en/rsvp/#confirm`,
     },
     hero: {
       date: "April 5, 2025 at 1:00 PM",

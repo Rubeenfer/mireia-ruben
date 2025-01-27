@@ -6,7 +6,7 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 const t = translations[lang];
 ---
 
-<section id="ourStory" class="section">
+<section id={t.nav.ourStory.link.split("#").at(1)} class="section">
   <div class="overlay top-overlay"></div>
   <div class="section-container">
     <div class="md:w-1/3"></div>
