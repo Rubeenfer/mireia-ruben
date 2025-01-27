@@ -25,13 +25,7 @@ const t = translations[lang];
 <style>
   .section {
     @apply relative flex min-h-dvh flex-col items-center justify-end bg-hero bg-cover bg-top;
-    @apply bg-fixed bg-no-repeat dark:bg-darkHero dark:bg-cover dark:bg-bottom;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0),
-        rgba(134, 137, 93, 0.3)
-      ),
-      url(/images/farinera_day.jpg);
+    @apply bg-scroll bg-no-repeat dark:bg-darkHero dark:bg-cover dark:bg-bottom md:bg-fixed;
   }
   .background-blur {
     @apply absolute inset-0 z-0 bg-dark opacity-20;
