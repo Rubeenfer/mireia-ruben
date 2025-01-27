@@ -27,3 +27,12 @@ const t = translations[lang];
     <slot />
   </body>
 </html>
+
+<script>
+  interface ExtendedScreenOrientation extends ScreenOrientation {
+    lock(orientation: string): Promise<void>;
+  }
+  const orientation = screen.orientation as ExtendedScreenOrientation;
+
+  orientation.lock("portrait").catch((err) => console.error(err));
+</script>
