@@ -39,3 +39,4 @@ Este proyecto está bajo la Licencia MIT.
 // TODO:
 
 - Check CountdownTimer translations when singular
+- Think what to show when timer finish
