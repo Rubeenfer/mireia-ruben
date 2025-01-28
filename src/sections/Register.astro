@@ -36,14 +36,3 @@ const forms: Record<"es" | "ca" | "en", string> = {
     @apply m-auto rounded-lg;
   }
 </style>
-
-<script>
-  const observer = new MutationObserver(() => {
-    const footerButton = document.querySelector(
-      '[type="button"][data-qa="fixed-footer-brand-button"]',
-    ) as HTMLElement;
-    if (footerButton) footerButton.style.display = "none";
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-</script>

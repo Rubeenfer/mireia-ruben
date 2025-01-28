@@ -66,8 +66,9 @@ const t = translations[lang];
     @apply flex w-auto items-center justify-end gap-4 md:w-1/5;
   }
   .navItem {
-    @apply max-w-min whitespace-nowrap text-sm font-light text-dark transition-colors duration-300 hover:text-cream;
+    @apply max-w-min whitespace-nowrap text-sm font-light text-dark transition-colors duration-300 hover:text-leaf;
     @apply dark:text-cream dark:hover:text-olive md:text-xs lg:text-base;
+    @apply border-b-[1px] border-dark hover:border-leaf dark:border-cream dark:hover:border-olive;
   }
 
   .common {
