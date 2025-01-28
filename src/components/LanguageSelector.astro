@@ -2,8 +2,8 @@
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 ---
 
-<div class="select-container">
-  <select id="select" class="select text-kalam">
+<div class="select-container cursor-pointer">
+  <select id="select" class="select text-kalam cursor-pointer">
     <option value="es" selected={lang === "es"}>ES</option>
     <option value="ca" selected={lang === "ca"}>CA</option>
     <option value="en" selected={lang === "en"}>EN</option>

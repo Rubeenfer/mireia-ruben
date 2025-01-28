@@ -1,4 +1,5 @@
 ---
+import Form from "../components/Form";
 import { translations } from "../i18n/translations";
 
 const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
@@ -16,9 +17,8 @@ const forms: Record<"es" | "ca" | "en", string> = {
     <h2 class="heading-2">
       {t.rsvp.title}
     </h2>
-    <div class="form">
-      <iframe src={forms[lang]} class="h-[100dvh] w-[100dvw]"> </iframe>
-    </div>
+    <Form client:only />
+    <!-- <iframe src={forms[lang]} class="h-[100dvh] w-[100dvw]"> </iframe> -->
   </div>
 </section>
 
@@ -30,9 +30,5 @@ const forms: Record<"es" | "ca" | "en", string> = {
   .section-container {
     @apply container flex min-w-[100dvw] max-w-lg flex-col gap-10 rounded-md py-20;
     @apply bg-cover bg-no-repeat;
-  }
-
-  .form {
-    @apply m-auto rounded-lg;
   }
 </style>
