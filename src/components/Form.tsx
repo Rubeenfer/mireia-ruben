@@ -72,7 +72,7 @@ const Form = () => {
       />
       {!submitted && (
         <form
-          action="https://docs.google.com/forms/u/0/d/1DUJprRNpD20BC3_JZc2zyoREeXtG43PvHeBXx0NpE8c/formResponse?embedded=true"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfIxEDZLXM_U7pRkaY9OJ-dq7WCtgLH25dpvJCJEcnmMrfWzw/formResponse?embedded=true"
           method="post"
           target="hidden_iframe"
           className="container flex flex-col gap-8 bg-leaf p-4 dark:bg-sky md:p-10"
@@ -93,13 +93,13 @@ const Form = () => {
 
           <div className="flex w-full flex-col gap-6 sm:flex-row">
             <fieldset className="flex w-full flex-col gap-1 md:w-1/2">
-              <label className="text-kalam text-lg" htmlFor={"entry.347632990"}>
+              <label className="text-kalam text-lg" htmlFor={"emailAddress"}>
                 Email
               </label>
               <input
-                type="text"
+                type="email"
                 className="h-8 rounded-md pl-2 dark:text-dark"
-                name={"entry.347632990"}
+                name={"emailAddress"}
                 placeholder={"Email"}
                 required={true}
               />
