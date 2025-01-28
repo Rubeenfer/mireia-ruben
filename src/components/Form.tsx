@@ -187,7 +187,7 @@ const Form = () => {
                   const isSelected = intolerances.includes(option);
                   return (
                     <label
-                      className={`flex w-32 rounded-md border-2 border-white bg-white p-0.5 md:w-40`}
+                      className={`flex w-[47%] rounded-md border-2 border-white bg-white p-0.5 md:w-40`}
                       key={option}
                       htmlFor={option}
                     >
@@ -218,7 +218,7 @@ const Form = () => {
                     </label>
                   );
                 })}
-                <div className="flex w-32 rounded-md border-2 border-white bg-white p-0.5 md:w-40">
+                <div className="flex w-[47%] rounded-md border-2 border-white bg-white p-0.5 md:w-40">
                   <input
                     type="hidden"
                     id="other"
