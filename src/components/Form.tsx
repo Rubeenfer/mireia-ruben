@@ -11,7 +11,7 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
   const intolerancesOptions = [t.int1, t.int2, t.int3];
   const companionOptions = [t.yes, t.no];
 
-  const localSubmitted = localStorage.getItem("dsa");
+  const localSubmitted = localStorage.getItem("submitted");
   const [submitted, setSubmitted] = useState(localSubmitted === "submitted");
   const [main, setMain] = useState<string>(mainOptions[0].text);
   const [intolerances, setIntolerances] = useState<string[]>([]);
@@ -154,7 +154,11 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                 type="hidden"
                 required={true}
                 name="entry.1782240739"
-                value={intolerances.concat([other]).join(", ") || "No"}
+                value={
+                  (other
+                    ? intolerances.concat([other]).join(", ")
+                    : intolerances.join(", ")) || "No"
+                }
               />
               <legend className="text-kalam text-lg">{t.int}</legend>
               <fieldset className="flex flex-row flex-wrap gap-4">
