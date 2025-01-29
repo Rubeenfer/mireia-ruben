@@ -17,7 +17,7 @@ const forms: Record<"es" | "ca" | "en", string> = {
     <h2 class="heading-2">
       {t.rsvp.title}
     </h2>
-    <Form client:only />
+    <Form lang={lang} client:only />
     <!-- <iframe src={forms[lang]} class="h-[100dvh] w-[100dvw]"> </iframe> -->
   </div>
 </section>

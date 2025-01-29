@@ -1,0 +1,85 @@
+export const formTranslations = {
+  es: {
+    text1: "Estamos muy felices de contar contigo en este día tan especial.",
+    text2:
+      "El formulario estará disponible hasta el día 01/03/2025, después de esa fecha ya no se podrá acceder.",
+    text3:
+      "También queremos que sepas que si tu idea de un regalo perfecto es algo útil y práctico, nuestra cuenta bancaria es ES71 1465 0100 93 1749434297.",
+    title1: "Datos del invitado",
+    title2: "Datos del acompañante",
+    name: "Nombre y apellidos",
+    email: "Correo electrónico",
+    phone: "Número de teléfono",
+    main: "¿Que plato principal prefieres?",
+    main1:
+      "Cubo de meloso de ternera con salsa de Pedro Ximenez y gratinado de patata",
+    main2:
+      "Sándwich de dorada salvaje con salteado de cebolla con setas y salsa de setas",
+    main3: "Opción vegetariana",
+    int: "¿Tienes alguna alergia o intolerancia?",
+    int1: "Gluten",
+    int2: "Lactosa",
+    int3: "Marisco",
+    int4: "Otras",
+    companion: "¿Vas a venir acompañado/a?",
+    yes: "Si",
+    no: "No",
+    thanks1: "Gracias por rellenar el formulario de confirmación.",
+    thanks2: "Hemos enviado una copia de las respuestas a tu correo.",
+  },
+  en: {
+    text1: "We are very happy to have you on this very special day.",
+    text2:
+      "The form will be available until 01/03/2025; after that date, it will no longer be accessible.",
+    text3:
+      "We want you to know that if your idea of a perfect gift is something useful and practical, our bank account is ES71 1465 0100 93 1749434297.",
+    title1: "Guest details",
+    title2: "Companion details",
+    name: "Name and surname",
+    email: "Email address",
+    phone: "Phone number",
+    main: "What main dish do you prefer?",
+    main1: "Beef tenderloin cube with Pedro Ximenez sauce and potato gratin",
+    main2:
+      "Wild sea bream sandwich with sautéed onions with mushrooms and mushroom sauce",
+    main3: "Vegetarian option",
+    int: "Do you have any allergies or intolerances?",
+    int1: "Gluten",
+    int2: "Lactose",
+    int3: "Seafood",
+    int4: "Other",
+    companion: "Are you coming with someone?",
+    yes: "Yes",
+    no: "No",
+    thanks1: "Thank you for filling out the confirmation form.",
+    thanks2: "We have sent a copy of the responses to your email.",
+  },
+  ca: {
+    text1: "Estem molt feliços de comptar amb tu en aquest dia tan especial.",
+    text2:
+      "El formulari estarà disponible fins al dia 01/03/2025; després d'aquesta data, ja no es podrà accedir.",
+    text3:
+      "També volem que sàpigues que si la teva idea d'un regal perfecte és una cosa útil i pràctica, el nostre compte bancari és ES71 1465 0100 93 1749434297.",
+    title1: "Dades del convidat",
+    title2: "Dades de l'acompanyant",
+    name: "Nom i cognoms",
+    email: "Correu electrònic",
+    phone: "Número de telèfon",
+    main: "Quin plat principal prefereixes?",
+    main1:
+      "Cub de melós de vedella amb salsa de Pedro Ximenez i graten de patata",
+    main2:
+      "Sandvitx orada salvatge amb saltejat de ceba amb bolets i salsa de ceps",
+    main3: "Opció vegetariana",
+    int: "Tens alguna al·lèrgia o intolerància?",
+    int1: "Gluten",
+    int2: "Lactosa",
+    int3: "Marisc",
+    int4: "Altres",
+    companion: "Vindràs acompanyat/da?",
+    yes: "Si",
+    no: "No",
+    thanks1: "Gràcies per omplir el formulari de confirmació.",
+    thanks2: "Hem enviat una copia de les respostes al teu correu.",
+  },
+};

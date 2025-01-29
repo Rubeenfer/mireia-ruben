@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { formTranslations } from '../i18n/formTranslations';
+import { useState } from 'react';
 
-const mainOptions = [
-  {
-    text: "Cub de melós de vedella amb salsa de Pedro Ximenez i graten de patata",
-    class: "bg-melos",
-  },
-  {
-    text: "Sandvitx orada salvatge amb saltejat de ceba amb bolets i salsa de ceps",
-    class: "bg-orada",
-  },
-  { text: "Opció vegetariana", class: "bg-veggie" },
-];
+const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
+  const t = formTranslations[lang];
+  const mainOptions = [
+    { text: t.main1, class: "bg-melos" },
+    { text: t.main2, class: "bg-orada" },
+    { text: t.main3, class: "bg-veggie" },
+  ];
+  const intolerancesOptions = [t.int1, t.int2, t.int3];
+  const companionOptions = [t.yes, t.no];
 
-const intolerancesOptions = ["Gluten", "Lactosa", "Marisc"];
-
-const companionOptions = ["Si", "No"];
-
-const Form = () => {
-  const localSubmitted = localStorage.getItem("submitted");
+  const localSubmitted = localStorage.getItem("dsa");
   const [submitted, setSubmitted] = useState(localSubmitted === "submitted");
   const [main, setMain] = useState<string>(mainOptions[0].text);
   const [intolerances, setIntolerances] = useState<string[]>([]);
@@ -34,29 +28,16 @@ const Form = () => {
     <div className="container m-auto flex max-w-screen-md flex-col items-center gap-10">
       {!submitted && (
         <div className="flex flex-col gap-2 px-4">
-          <p className="m-auto w-full text-pretty text-center">
-            Estem molt feliços de comptar amb tu en aquest dia tan especial.
-          </p>
-          <p className="m-auto w-full text-pretty text-center">
-            El formulari estarà disponible fins al dia <b>05/03/2025</b>;
-            després d'aquesta data, ja no es podrà accedir.
-          </p>
-          <p className="m-auto w-full text-pretty text-center">
-            També volem que sàpigues que si la teva idea d'un regal perfecte és
-            una cosa útil i pràctica, el nostre compte bancari és{" "}
-            <b>ES71 1465 0100 93 1749434297</b>.
-          </p>
+          <p className="m-auto w-full text-pretty text-center">{t.text1}</p>
+          <p className="m-auto w-full text-pretty text-center">{t.text2}</p>
+          <p className="m-auto w-full text-pretty text-center">{t.text3}</p>
         </div>
       )}
 
       {submitted && (
         <div className="flex flex-col gap-2 px-4">
-          <p className="m-auto w-full text-pretty text-center">
-            Gràcies per omplir el formulari de confirmació.
-          </p>
-          <p className="m-auto w-full text-pretty text-center">
-            Hem enviat una copia de les respostes al teu correu.
-          </p>
+          <p className="m-auto w-full text-pretty text-center">{t.thanks1}</p>
+          <p className="m-auto w-full text-pretty text-center">{t.thanks2}</p>
         </div>
       )}
 
@@ -77,43 +58,41 @@ const Form = () => {
           target="hidden_iframe"
           className="container flex flex-col gap-8 bg-leaf p-4 dark:bg-sky md:p-10"
         >
-          <h3 className="heading-3 pt-4">Dades del convidat</h3>
+          <input type="hidden" name={"entry.2124870633"} value={lang} />
+          <h3 className="heading-3 pt-4">{t.title1}</h3>
           <fieldset className="flex w-full flex-col gap-1">
             <label className="text-kalam text-lg" htmlFor={"entry.509811896"}>
-              Name
+              {t.name}
             </label>
             <input
               className="h-8 rounded-md pl-2 dark:text-dark"
               type="text"
               name={"entry.509811896"}
-              placeholder={"Name"}
               required={true}
             />
           </fieldset>
 
           <div className="flex w-full flex-col gap-6 sm:flex-row">
             <fieldset className="flex w-full flex-col gap-1 md:w-1/2">
-              <label className="text-kalam text-lg" htmlFor={"emailAddress"}>
-                Email
+              <label className="text-kalam text-lg" htmlFor={"entry.977642097"}>
+                {t.email}
               </label>
               <input
                 type="email"
                 className="h-8 rounded-md pl-2 dark:text-dark"
-                name={"emailAddress"}
-                placeholder={"Email"}
+                name={"entry.977642097"}
                 required={true}
               />
             </fieldset>
 
             <fieldset className="flex w-full flex-col gap-1 md:w-1/2">
               <label className="text-kalam text-lg" htmlFor={"entry.629026583"}>
-                Phone
+                {t.phone}
               </label>
               <input
                 type="text"
                 className="h-8 rounded-md pl-2 dark:text-dark"
                 name={"entry.629026583"}
-                placeholder={"Phone"}
                 required={true}
               />
             </fieldset>
@@ -126,9 +105,7 @@ const Form = () => {
               required={true}
               value={main}
             />
-            <legend className="text-kalam text-lg">
-              {"Quin plat principal prefereixes?"}
-            </legend>
+            <legend className="text-kalam text-lg">{t.main}</legend>
             <fieldset className="flex flex-col justify-between gap-2 md:flex-row">
               {mainOptions.map((option) => {
                 const isSelected = main === option.text;
@@ -160,7 +137,7 @@ const Form = () => {
                         />
                       </div>
                       <div
-                        className={`md:rounded-r-0 ml-1 flex h-32 w-1/2 items-center justify-center rounded-r-md p-2 md:ml-0 md:mt-1 md:h-20 md:w-full md:rounded-b-md ${isSelected ? "bg-olive dark:bg-dark" : "bg-white text-dark"}`}
+                        className={`ml-1 flex h-32 w-1/2 items-center justify-center rounded-md p-2 md:ml-0 md:mt-1 md:h-20 md:w-full ${isSelected ? "bg-olive dark:bg-dark" : "bg-white text-dark"}`}
                       >
                         {option.text}
                       </div>
@@ -179,9 +156,7 @@ const Form = () => {
                 name="entry.1782240739"
                 value={intolerances.concat([other]).join(", ") || "No"}
               />
-              <legend className="text-kalam text-lg">
-                {"Tens alguna al·lèrgia o intolerància?"}
-              </legend>
+              <legend className="text-kalam text-lg">{t.int}</legend>
               <fieldset className="flex flex-row flex-wrap gap-4">
                 {intolerancesOptions.map((option) => {
                   const isSelected = intolerances.includes(option);
@@ -234,7 +209,7 @@ const Form = () => {
                     className={`w-full rounded-md pl-2 focus:outline-none ${other !== "" ? "bg-olive dark:bg-dark" : "bg-white text-dark"}`}
                     type="text"
                     name={"other_value"}
-                    placeholder={"Other"}
+                    placeholder={t.int4}
                     onChange={(e) => setOther(e.target.value)}
                   />
                 </div>
@@ -248,9 +223,7 @@ const Form = () => {
                 name="entry.1740548196"
                 value={companion}
               />
-              <legend className="text-kalam text-lg">
-                {"Vindràs acompanyat?"}
-              </legend>
+              <legend className="text-kalam text-lg">{t.companion}</legend>
               <div className="flex gap-4">
                 {companionOptions.map((option) => {
                   const isSelected = option === companion;
@@ -287,19 +260,18 @@ const Form = () => {
           {companion === companionOptions[0] && (
             <>
               <hr className="border-olive" />
-              <h3 className="heading-3 pt-4">Dades del acompanyant</h3>
+              <h3 className="heading-3 pt-4">{t.title2}</h3>
               <fieldset className="flex w-full flex-col gap-1">
                 <label
                   className="text-kalam text-lg"
                   htmlFor={"entry.1215336817"}
                 >
-                  Name
+                  {t.name}
                 </label>
                 <input
                   className="h-8 rounded-md pl-2 dark:text-dark"
                   type="text"
                   name={"entry.1215336817"}
-                  placeholder={"Name"}
                   required={true}
                 />
               </fieldset>
@@ -310,13 +282,12 @@ const Form = () => {
                     className="text-kalam text-lg"
                     htmlFor={"entry.388578684"}
                   >
-                    Email
+                    {t.email}
                   </label>
                   <input
                     type="text"
                     className="h-8 rounded-md pl-2 dark:text-dark"
                     name={"entry.388578684"}
-                    placeholder={"Email"}
                     required={true}
                   />
                 </fieldset>
@@ -326,13 +297,12 @@ const Form = () => {
                     className="text-kalam text-lg"
                     htmlFor={"entry.481350050"}
                   >
-                    Phone
+                    {t.phone}
                   </label>
                   <input
                     type="text"
                     className="h-8 rounded-md pl-2 dark:text-dark"
                     name={"entry.481350050"}
-                    placeholder={"Phone"}
                     required={true}
                   />
                 </fieldset>
@@ -345,9 +315,7 @@ const Form = () => {
                   required={true}
                   value={main2}
                 />
-                <legend className="text-kalam text-lg">
-                  {"Quin plat principal prefereixes?"}
-                </legend>
+                <legend className="text-kalam text-lg">{t.main}</legend>
                 <fieldset className="flex flex-col justify-between gap-2 md:flex-row">
                   {mainOptions.map((option) => {
                     const isSelected = main2 === option.text;
@@ -397,9 +365,7 @@ const Form = () => {
                     name="entry.858344545"
                     value={intolerances2.concat([other2]).join(", ") || "No"}
                   />
-                  <legend className="text-kalam text-lg">
-                    {"Tens alguna al·lèrgia o intolerància?"}
-                  </legend>
+                  <legend className="text-kalam text-lg">{t.int}</legend>
                   <fieldset className="flex flex-row flex-wrap gap-4">
                     {intolerancesOptions.map((option) => {
                       const isSelected = intolerances2.includes(option);
@@ -452,7 +418,7 @@ const Form = () => {
                         className={`w-full rounded-md pl-2 focus:outline-none ${other2 !== "" ? "bg-olive dark:bg-dark" : "bg-white"}`}
                         type="text"
                         name={"other_value_2"}
-                        placeholder={"Other"}
+                        placeholder={t.int4}
                         onChange={(e) => setOther2(e.target.value)}
                       />
                     </div>
