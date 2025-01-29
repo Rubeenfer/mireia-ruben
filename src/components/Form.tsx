@@ -247,6 +247,10 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                           appearance: "none",
                           WebkitAppearance: "none", // Para soporte en Safari
                           MozAppearance: "none", // Para soporte en Firefox
+                          margin: 0,
+                          padding: 0,
+                          width: 0,
+                          height: 0,
                         }}
                         name="companion"
                         value={option}
