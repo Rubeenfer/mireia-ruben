@@ -130,10 +130,6 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                             appearance: "none",
                             WebkitAppearance: "none", // Para soporte en Safari
                             MozAppearance: "none", // Para soporte en Firefox
-                            margin: 0,
-                            padding: 0,
-                            width: 0,
-                            height: 0,
                           }}
                           value={option.text}
                           checked={isSelected}
@@ -184,6 +180,10 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                           appearance: "none",
                           WebkitAppearance: "none", // Para soporte en Safari
                           MozAppearance: "none", // Para soporte en Firefox
+                          margin: 0,
+                          padding: 0,
+                          width: 0,
+                          height: 0,
                         }}
                         onChange={() =>
                           setIntolerances(
@@ -393,6 +393,10 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                               appearance: "none",
                               WebkitAppearance: "none", // Para soporte en Safari
                               MozAppearance: "none", // Para soporte en Firefox
+                              margin: 0,
+                              padding: 0,
+                              width: 0,
+                              height: 0,
                             }}
                             onChange={() =>
                               setIntolerances2(
