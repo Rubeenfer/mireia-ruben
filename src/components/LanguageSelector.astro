@@ -4,9 +4,9 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
 
 <div class="select-container cursor-pointer">
   <select id="select" class="select text-kalam cursor-pointer">
-    <option value="es" selected={lang === "es"}>ES</option>
-    <option value="ca" selected={lang === "ca"}>CA</option>
-    <option value="en" selected={lang === "en"}>EN</option>
+    <option class="optionItem" value="es" selected={lang === "es"}>ES</option>
+    <option class="optionItem" value="ca" selected={lang === "ca"}>CA</option>
+    <option class="optionItem" value="en" selected={lang === "en"}>EN</option>
   </select>
 </div>
 
@@ -17,6 +17,9 @@ const { lang = "es" }: { lang?: "es" | "ca" | "en" } = Astro.props;
   .select {
     @apply w-9 bg-transparent text-sm text-dark md:w-12;
     @apply focus:outline-none focus:ring-0 dark:bg-none dark:text-cream;
+  }
+  .optionItem {
+    @apply text-dark dark:text-dark;
   }
 </style>
 
