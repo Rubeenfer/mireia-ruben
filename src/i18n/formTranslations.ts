@@ -26,6 +26,7 @@ export const formTranslations = {
     no: "No",
     thanks1: "Gracias por rellenar el formulario de confirmación.",
     thanks2: "Hemos enviado una copia de las respuestas a tu correo.",
+    send: "Enviar",
   },
   en: {
     text1: "We are very happy to have you on this very special day.",
@@ -53,6 +54,7 @@ export const formTranslations = {
     no: "No",
     thanks1: "Thank you for filling out the confirmation form.",
     thanks2: "We have sent a copy of the responses to your email.",
+    send: "Send",
   },
   ca: {
     text1: "Estem molt feliços de comptar amb tu en aquest dia tan especial.",
@@ -81,5 +83,6 @@ export const formTranslations = {
     no: "No",
     thanks1: "Gràcies per omplir el formulari de confirmació.",
     thanks2: "Hem enviat una copia de les respostes al teu correu.",
+    send: "Enviar",
   },
 };

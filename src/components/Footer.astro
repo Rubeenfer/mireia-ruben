@@ -7,10 +7,14 @@ const currentYear = new Date().getFullYear();
     class="mx-auto flex flex-col justify-evenly px-4 py-4 text-center sm:items-start sm:text-left"
   >
     <p class="text-kalam">
-      Mireia: <a href="tel:+34636505445" class="link">+34 636 50 54 45</a>
+      Mireia: <a href="tel:+34636505445" class="hover:text-olive"
+        >+34 636 50 54 45</a
+      >
     </p>
     <p class="text-kalam">
-      Rubén: <a href="tel:+34600864251" class="link">+34 600 86 42 51</a>
+      Rubén: <a href="tel:+34600864251" class="hover:text-olive"
+        >+34 600 86 42 51</a
+      >
     </p>
   </div>
 
@@ -26,8 +30,5 @@ const currentYear = new Date().getFullYear();
   .footer {
     @apply z-50 flex max-w-[100dvw] flex-col items-center justify-center bg-leaf py-8 shadow-md sm:flex-row;
     @apply dark:bg-sky;
-  }
-  .link {
-    @apply hover:text-cream dark:hover:text-olive;
   }
 </style>
