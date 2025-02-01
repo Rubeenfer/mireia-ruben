@@ -11,7 +11,7 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
   const intolerancesOptions = [t.int1, t.int2, t.int3];
   const companionOptions = [t.yes, t.no];
 
-  const localSubmitted = localStorage.getItem("s");
+  const localSubmitted = localStorage.getItem("submitted");
   const [submitted, setSubmitted] = useState(localSubmitted === "submitted");
   const [main, setMain] = useState<string>(mainOptions[0].text);
   const [intolerances, setIntolerances] = useState<string[]>([]);
@@ -297,7 +297,7 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
                     {t.email}
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     className="h-8 rounded-md pl-2 dark:text-dark"
                     name={"entry.388578684"}
                     required={true}
