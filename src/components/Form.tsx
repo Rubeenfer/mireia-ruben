@@ -38,6 +38,7 @@ const Form = ({ lang }: { lang: "es" | "en" | "ca" }) => {
         <div className="flex flex-col gap-2 px-4">
           <p className="m-auto w-full text-pretty text-center">{t.thanks1}</p>
           <p className="m-auto w-full text-pretty text-center">{t.thanks2}</p>
+          <p className="m-auto w-full text-pretty text-center">{t.text3}</p>
         </div>
       )}
 
